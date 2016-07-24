@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" 
+        version="2.4">
+  <display-name>Money</display-name>
+  <description/>
+  
+  <context-param>
+    <param-name>log4jExposeWebAppRoot</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  
+  
+  <!-- 
+    Filter definitions.
+   -->
+<!--   <filter> -->
+<!--     <filter-name>UrlRewriteFilter</filter-name> -->
+<!--     <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class> -->
+<!--      <init-param> -->
+<!--       <param-name>logLevel</param-name> -->
+<!--       <param-value>log4j</param-value> -->
+<!--     </init-param> -->
+<!--   </filter> -->
+  
+  
+  <!--
+    Filter mappings.
+   -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>UrlRewriteFilter</filter-name> -->
+<!--     <url-pattern>/*</url-pattern> -->
+<!--   </filter-mapping> -->
+  
+  
+  <!--
+    Listeners
+   -->
+  <listener><listener-class>org.springframework.web.util.Log4jConfigListener</listener-class></listener>
+  <listener><listener-class>com.serotonin.money.web.listener.LifecycleListener</listener-class></listener>
+  
+  
+  <!-- 
+    Servlet definitions.
+   -->
+  <servlet>
+    <servlet-name>dwr-invoker</servlet-name>
+    <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>publishContainerAs</param-name>
+      <param-value>DwrContainer</param-value>
+    </init-param>
+    <init-param>
+      <param-name>crossDomainSessionSecurity</param-name>
+      <param-value>false</param-value>
+    </init-param>    
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet><servlet-name>accounts</servlet-name><servlet-class>com.serotonin.money.web.controller.AccountsServlet</servlet-class></servlet>
+  <servlet><servlet-name>account</servlet-name><servlet-class>com.serotonin.money.web.controller.AccountServlet</servlet-class></servlet>
+  <servlet><servlet-name>assetInfos</servlet-name><servlet-class>com.serotonin.money.web.controller.AssetInfosServlet</servlet-class></servlet>
+  <servlet><servlet-name>assetInfo</servlet-name><servlet-class>com.serotonin.money.web.controller.AssetInfoServlet</servlet-class></servlet>
+  <servlet><servlet-name>dividends</servlet-name><servlet-class>com.serotonin.money.web.controller.DividendServlet</servlet-class></servlet>
+  <servlet><servlet-name>transaction</servlet-name><servlet-class>com.serotonin.money.web.controller.TransactionServlet</servlet-class></servlet>
+  
+  
+  <!-- 
+    Servlet mappings.
+   -->
+  <servlet-mapping>
+    <servlet-name>dwr-invoker</servlet-name>
+    <url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/res/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping><servlet-name>accounts</servlet-name><url-pattern>/accounts</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>account</servlet-name><url-pattern>/accounts/*</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>assetInfos</servlet-name><url-pattern>/assetInfos</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>assetInfo</servlet-name><url-pattern>/assetInfos/*</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>dividends</servlet-name><url-pattern>/dividends</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>transaction</servlet-name><url-pattern>/transaction</url-pattern></servlet-mapping>
+  
+  
+  <!-- 
+    Other stuff.
+  -->
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+  </error-page>
+</web-app>

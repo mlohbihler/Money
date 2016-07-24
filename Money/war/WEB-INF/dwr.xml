@@ -1,0 +1,27 @@
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+  <allow>
+    <filter class="com.serotonin.money.web.dwr.ExceptionDetectionFilter"/>
+    
+    <create creator="new" javascript="MoneyDwr" scope="application">
+      <param name="class">com.serotonin.money.web.dwr.MoneyDwr</param>
+    </create>
+    
+    <convert converter="bean" match="com.serotonin.web.dwr.*"/>
+    <convert converter="bean" match="com.serotonin.db.IntValuePair"/>
+    <convert converter="bean" match="com.serotonin.db.KeyValuePair"/>
+    
+    <convert converter="exception" match="java.lang.Exception">
+      <param name="include" value="message"/>
+    </convert>
+    
+    <convert converter="enum" match="com.serotonin.money.vo.tx.TransactionType"/>
+    <convert converter="bean" match="com.serotonin.money.vo.*"/>
+    <convert converter="bean" match="com.serotonin.money.vo.tx.*"/>
+  </allow>
+  <signatures>
+    <![CDATA[
+    ]]>
+  </signatures>
+</dwr>

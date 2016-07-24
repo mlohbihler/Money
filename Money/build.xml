@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<project name="Money" basedir="." default="deploy">
+	<property file="build.properties"/>
+	
+    <property name="src.dir" value="src"/>
+	<property name="web.dir" value="war"/>
+	<property name="build.dir" value="build"/>
+	<property name="compile.dir" value="${build.dir}/WEB-INF/classes"/>
+	
+    <path id="master-classpath">
+        <fileset dir="${web.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+	    </fileset>
+	    <fileset dir="lib">
+	        <include name="*.jar"/>
+	    </fileset>
+    </path>
+	
+    <target name="|init" description="Initialization target for other targets">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+	<target name="clean" depends="|init" description="Clean output directories">
+		<delete>
+			<fileset dir="${build.dir}">
+				<include name="**/*"/>
+			</fileset>
+		</delete>
+		<mkdir dir="${build.dir}"/>
+	</target>
+	
+	<target name="compile" depends="|init" description="Compile main source tree java files">
+		<mkdir dir="${build.dir}/WEB-INF/classes"/>
+		<javac destdir="${build.dir}/WEB-INF/classes" debug="true" debuglevel="lines,vars,source"
+				deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
+            <src path="${src.dir}"/>
+			<classpath refid="master-classpath"/>
+		</javac>
+	</target>
+	
+	<target name="static" depends="|init" description="Copy changed static assets to build directory">
+		<copy todir="${build.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}"><include name="**/*.*"/></fileset>
+		</copy>
+		<copy todir="${build.dir}/WEB-INF" preservelastmodified="true">
+			<fileset dir="."><include name="env.properties"/></fileset>
+		</copy>
+	</target>
+	
+	<target name="build" depends="compile,static" description="Deploy application"/>
+	  
+  
+<!-- ============================================================== -->
+<!-- Tomcat deployment tasks                                        -->
+<!-- ============================================================== -->
+
+	<target name="|copy" depends="static" description="Copy changed assets to build directory">
+		<copy todir="${tomcat.home}/${tomcat.hostname}/${tomcat.appdir}" preservelastmodified="true">
+			<fileset dir="${build.dir}"><include name="**/*.*"/></fileset>
+		</copy>
+	</target>
+	
+	<target name="deploy" depends="build,|copy" description="Compile and copy changed assets to Tomcat"/>
+	
+<!-- ============================================================== -->
+<!-- Tomcat tasks                                                   -->
+<!-- ============================================================== -->
+	
+	<taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
+		<classpath><path location="${tomcat.home}/lib/catalina-ant.jar"/></classpath>
+	</taskdef>
+	<taskdef name="list" classname="org.apache.catalina.ant.ListTask">
+		<classpath><path location="${tomcat.home}/lib/catalina-ant.jar"/></classpath>
+	</taskdef>
+	<taskdef name="start" classname="org.apache.catalina.ant.StartTask">
+		<classpath><path location="${tomcat.home}/lib/catalina-ant.jar"/></classpath>
+	</taskdef>
+	<taskdef name="stop" classname="org.apache.catalina.ant.StopTask">
+		<classpath><path location="${tomcat.home}/lib/catalina-ant.jar"/></classpath>
+	</taskdef>
+	
+	<target name="tc-reload" description="Reload application in Tomcat">
+		<reload url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}"
+				path="${tomcat.apppath}"/>
+	</target>
+	
+	<target name="tc-start" description="Start Tomcat application">
+		<start url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}"
+				path="${tomcat.apppath}"/>
+	</target>
+	
+	<target name="tc-stop" description="Stop Tomcat application">
+		<stop url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}"
+				path="${tomcat.apppath}"/>
+	</target>
+	
+	<target name="tc-list" description="List Tomcat applications">
+		<list url="${tomcat.manager.url}" username="${tomcat.manager.username}" password="${tomcat.manager.password}"/>
+	</target>
+</project>

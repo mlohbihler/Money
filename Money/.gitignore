@@ -1,0 +1,5 @@
+bin
+build
+build.properties
+env.properties
+private

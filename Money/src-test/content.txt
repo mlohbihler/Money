@@ -1,0 +1,380 @@
+<!DOCTYPE html><html><head><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><title>Company Comparison - Google Finance</title><meta name="Description" content="Compare the latest stock quotes, news and financial metrics forAmerican Capital Agency Corp., ARMOUR Residential REIT, Inc., Whiting USA Trust, WisdomTree SmallCap Earnings Fund (ETF), Big Bank Big Oil Split Corp., ISHARES BALANCED INCOME CORE FUND, Chorus Aviation Inc, CanWel Building Materials Group Ltd., Dividend 15 Split Corp., Dividend 15 Split Corp., DATA GROUP LTD, DPF India Opportunities Fund, Enerplus Corp, EXTENDICARE INC."><meta http-equiv="X-UA-Compatible" content="IE=10"><link rel="stylesheet" type="text/css" href="/finance/f/finance_us-3578168175.css"><link rel="stylesheet" type="text/css" href="/finance/_/ss/a/ver=-hq2038izblz1/am=!9It77TasFLH0g-vc/bf=/r=O"><link rel="icon" type="image/vnd.microsoft.icon" href="/finance/favicon.ico"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}</style><script></script><script>
+      function _rpt() {}
+      function _tck() {}
+    </script><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40765809-1', {
+      'allowLinker': true,
+      'cookiePath': '/finance'
+    });
+    ga('send', 'pageview');
+    </script></head><body><div class=fjfe-bodywrapper><div id=fjfe-real-body class=g-doc><input type="text" name="hist_state" id="hist_state" style="display:none;"><iframe id="hist_frame" name="hist_frame" class=invfr tabindex="-1"></iframe><iframe src="/finance/_/js/a/b/rt=h/ver=RjB_MBcLYxg.en_US./am=!9It77TasFLH0g-vc/d=0" class=invfr tabindex="-1"></iframe><div id=gbar><nobr><a class=gb1 href="https://www.google.ca/webhp?tab=ew">Search</a> <a class=gb1 href="http://www.google.ca/imghp?hl=en&tab=ei">Images</a> <a class=gb1 href="http://maps.google.ca/maps?hl=en&tab=el">Maps</a> <a class=gb1 href="https://play.google.com/?hl=en&tab=e8">Play</a> <a class=gb1 href="http://www.youtube.com/?tab=e1">YouTube</a> <a class=gb1 href="http://news.google.ca/nwshp?hl=en&tab=en">News</a> <a class=gb1 href="https://mail.google.com/mail/?tab=em">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=eo">Drive</a> <a class=gb1 style="text-decoration:none" href="http://www.google.ca/intl/en/options/"><u>More</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a  href="http://www.google.com/support/finance?hl=en" class=gb4>Help</a> | <a target=_top id=gb_70 href="https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=http://www.google.com/finance?q%3DNASDAQ:AGNC,NYSE:ARR,NYSE:WHX,NYSEARCA:EES,TSE:BBO,TSE:CBD,TSE:CHR.B,TSE:CWX,TSE:DFN,TSE:DFN-A,TSE:DGI,TSE:DPF.UN,TSE:ERF,TSE:EXE&followup=http://www.google.com/finance?q%3DNASDAQ:AGNC,NYSE:ARR,NYSE:WHX,NYSEARCA:EES,TSE:BBO,TSE:CBD,TSE:CHR.B,TSE:CWX,TSE:DFN,TSE:DFN-A,TSE:DGI,TSE:DPF.UN,TSE:ERF,TSE:EXE" class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div id=fjfe-click-wrapper><script>
+(function() {
+  var l = window.location;
+  var q = l.search ? l.search.substr(1) : '';
+  var h = l.hash ? l.hash.substr(1) : '';
+  var p = '/finance';
+  var ss = 'stockscreener';
+  var conn = window.history && window.history.pushState ? '/' : '#';
+  if (l.pathname == p + '/' + ss) {
+    if (h) l.href = p + conn + ss + '?' + q + '&' + h;
+  } else if (l.pathname != p && h) {
+    l.href = p + l.hash;
+  }
+  if (h) {
+document.getElementById('fjfe-click-wrapper').style.display = 'none';
+  }
+})();
+</script><div id=gf-head class="g-section g-tpl-75-25 g-split"><div class="g-unit g-first"><div class=fjfe-logo><a href="/finance/?ei=_GVJU9ijMMvuqgHscQ"><img src="/finance/f/logo_us-115376669.gif" alt="Google Finance"></a></div><div id=gf-search class=fjfe-search><form method="get" action="/finance" autocomplete="off"><input class=fjfe-searchbox-input name=q type=text tabindex=1 value="NASDAQ:AGNC,NYSE:ARR,NYSE:WHX,NYSEARCA:EES,TSE:BBO,TSE:CBD,TSE:CHR.B,TSE:CWX,TSE:DFN,TSE:DFN-A,TSE:DGI,TSE:DPF.UN,TSE:ERF,TSE:EXE"></input><span class=fjfe-searchbox-button-wrapper><span class=fjfe-searchbox-button-wrapper2><input class=fjfe-searchbox-button type=submit tabindex=2 value="Get quotes"></input></span></span><input type=hidden name="ei" value="_GVJU9ijMMvuqgHscQ"></input></form></div></div><div class="g-unit fjfe-promo"><div id="ad2-target" class="id-ad2-target"></div></div></div><div class=elastic><div id=app class="g-section g-tpl-left-11p4em"><div class="g-unit g-first"><div id=gf-nav><div class=fjfe-nav-nav><ul class=fjfe-nav id=navmenu><li class=fjfe-nav-item><a href="/finance?ei=_GVJU9ijMMvuqgHscQ"><div>Markets</div></a><li class=fjfe-nav-item><a href="/finance/market_news?ei=_GVJU9ijMMvuqgHscQ"><div>News</div></a><li class=fjfe-nav-item><a href="/finance/portfolio?action=view&amp;ei=_GVJU9ijMMvuqgHscQ"><div>Portfolios</div></a><li class=fjfe-nav-item><a href="/finance/stockscreener?ei=_GVJU9ijMMvuqgHscQ"><div>Stock screener</div></a><li class=fjfe-nav-item><a href="/finance/domestic_trends?ei=_GVJU9ijMMvuqgHscQ"><div>Google Domestic Trends</div></a></ul></div><div class="fjfe-recentquotes fjfe-recentquotes-noquote"><h4>Recent Quotes <span class="fjfe-recentquotes-duration">(<a href="//www.google.com/history/optout?hl=en">30 days</a>)</span></h4><div class=fjfe-recentquotes-noquote-notification>You have no recent quotes</div><div class=fjfe-recentquotes-quotes><div class="fjfe-toggle fjfe-toggle-button"><span class=fjfe-chg-toggle>chg</span> | <span class=fjfe-perc-toggle>%</span></div><div class=fjfe-table-div><table class=fjfe-recentquotes-table id=rq width=100%></table></div></div></div></div><script>var _cleardot = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    var google = google || {};
+    google.finance = google.finance || {};
+    google.finance.gce =false;</script><script src="/finance/f/sfe-opt-3565483035.js"></script><script>
+      _regOnLoad = function(f) {
+        if (document.readyState == 'complete') {
+          f && f();
+        } else {
+          // Window.attachEvent() for IE8 and below compatability.
+          var addEventFunction = window.attachEvent ||
+              window.addEventListener || function(ignored, f) { f(); };
+          var event = window.attachEvent ? 'onload' : 'load';
+          f && addEventFunction(event, f);
+        }
+      };
+    
+      google.finance.renderRecentQuotes = function() {};
+    </script></div><div class=g-unit id=gf-viewc><div class=fjfe-content>
+<div class=g-wrap>
+<div class="g-section sfe-break-bottom-8">
+<div id="comparisonheader" class="g-tpl-67-33 g-split hdg top appbar-hide">
+<div class="g-unit g-first">
+<h3 class=pagetitle>Compare companies
+</h3>&nbsp;&nbsp;
+<a href="/finance/portfolio?action=add&amp;addticker=NASDAQ%3AAGNC%2CNYSE%3AARR%2CNYSE%3AWHX%2CNYSEARCA%3AEES%2CTSE%3ABBO%2CTSE%3ACBD%2CTSE%3ACHR.B%2CTSE%3ACWX%2CTSE%3ADFN%2CTSE%3ADFN-A%2CTSE%3ADGI%2CTSE%3ADPF.UN%2CTSE%3AERF%2CTSE%3AEXE&ei=_GVJU9ijMMvuqgHscQ" class=norm>Watch these stocks</a>
+</div>
+<div class="g-unit norm">Find more results for<b>
+<a href="?noIL=1&q=NASDAQ%3AAGNC%2CNYSE%3AARR%2CNYSE%3AWHX%2CNYSEARCA%3AEES%2CTSE%3ABBO%2CTSE%3ACBD%2CTSE%3ACHR.B%2CTSE%3ACWX%2CTSE%3ADFN%2CTSE%3ADFN-A%2CTSE%3ADGI%2CTSE%3ADPF.UN%2CTSE%3AERF%2CTSE%3AEXE&ei=_GVJU9ijMMvuqgHscQ" id=searchmore>NASDAQ:AGNC,NYSE:ARR,NYSE:WHX,NYSEARCA:EES,TSE:BBO,TSE:CBD,TSE:CHR.B,TSE:CWX,TSE:DFN,TSE:DFN-A,TSE:DGI,TSE:DPF.UN,TSE:ERF,TSE:EXE</a></b>
+</div>
+</div>
+<div id=compare-bar-wrapper
+             class="id-compare-bar-wrapper cc-compare-bar">
+<div id=compare-bar class="id-compare-bar g-section"></div>
+</div>
+<div class="g-section g-tpl-right-1 sfe-break-top-5">
+<div class="g-unit g-first">
+<div class=g-c>
+<div>
+<div id=newstabsgroup>
+<div class="g-section g-tpl-25-75 g-split hdg">
+<div class="g-unit g-first">
+<h3>News</h3>
+</div>
+<div class=g-unit>
+<div id=news-panel-tabs class="id-news-tabs" style="display:none;">
+<div class="goog-tab goog-tab-selected">
+<a id=news_tab_title class=t>
+<b class=t><b class=t>Relevance</b></b></a>
+</div>
+<div class=goog-tab>
+<a id=news_by_date_tab_title class=t>
+<b class=t><b class=t>Date</b></b></a>
+</div>
+</div>
+</div>
+</div>
+<div id=tabs-clear class="id-tabs-clear goog-tab-bar-clear hide"></div>
+<div id=news_div_cont class=id-news_div_cont style="display:none;"></div>
+<div id=news_by_date_div_cont class=id-news_by_date_div_cont style="display:none;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class=g-unit>
+<div id=top-section class="g-c sfe-break-right">
+<div id=chart-section>
+<div id=chart_anchor class=id-chart_anchor></div>
+<div class=id-chart-footer>
+<div class="g-section g-tpl-67-33 g-split sfe-break-bottom-8 overflow-floatfix">
+<div class="g-unit g-first"><div class="id-chart-footer-links hide">
+<span style="white-space:nowrap;">
+<img width="16" hight="9" alt="Link to chart icon."
+            class="linktochart-img SP_link"
+            src="/finance/s/m4C5KaofCbA/images/cleardot.gif" />
+<span class=linktochart-link>
+Link to this view</span>
+</span>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g-section">
+<div class="hdg">
+<div class="g-section g-tpl-50-50 g-split gf-control">
+<div class="g-unit g-first">
+Show:
+<select id=related-select class=id-related-select>
+<option value=mrq >
+Most Recent Quarter
+</option>
+<option value=mra selected>
+Most Recent Annual
+</option>
+</select>
+</div>
+<div class=g-unit>
+<span class="id-related-edit-col linkbtn">Add or remove columns</span>
+<button class=id-related-save style="display:none">Save changes</button>
+<button class=id-related-cancel style="display:none">Cancel</button>
+</div>
+</div>
+</div>
+<div class="id-related-table gf-table-scroll-x jfk-scrollbar"
+       style="padding-bottom:15px;">
+</div>
+</div>
+</div>
+</div></div></div></div></div><div id=gf-foot><div id=fjfe-edition-links class=fjfe-footer-links>Google Finance Beta available in: <a href="http://www.google.com.hk/finance?ei=_GVJU9ijMMvuqgHscQ" class="fjfe-edition-link">Hong Kong</a> - <a href="http://www.google.ca/finance?ei=_GVJU9ijMMvuqgHscQ" class="fjfe-edition-link">Canada</a> - <a href="http://www.google.com/finance?ei=_GVJU9ijMMvuqgHscQ" class="fjfe-edition-link">U.S.</a> - <a href="http://www.google.com.hk/finance?hl=zh-CN&ei=_GVJU9ijMMvuqgHscQ" class="fjfe-edition-link">China</a> - <a href="http://www.google.co.uk/finance?ei=_GVJU9ijMMvuqgHscQ" class="fjfe-edition-link">U.K.</a></div><p class=fjfe-footer-disclaimer>Information is provided "as is" and solely for informational purposes, not for trading purposes or advice, and may be delayed.<br>To see all exchange delays, please <a href="http://www.google.com/intl/en/googlefinance/disclaimer/?ei=_GVJU9ijMMvuqgHscQ" class="fjfe-secondary-link fjfe-no-sticky-params"> see disclaimer</a>.</p><div class=fjfe-footer-links>&copy;2014 Google - <a href="http://www.google.com?hl=en&ei=_GVJU9ijMMvuqgHscQ">Google Home</a> - <a href="http://googlefinanceblog.blogspot.com?ei=_GVJU9ijMMvuqgHscQ">Blog</a> - <a href="http://support.google.com/finance?hl=en&ei=_GVJU9ijMMvuqgHscQ">Help</a> - <a href="http://support.google.com/finance?ctx=report&hl=en&ei=_GVJU9ijMMvuqgHscQ">Report a Problem</a> - <a href="http://www.google.com/intl/en/policies/privacy/?ei=_GVJU9ijMMvuqgHscQ">Privacy Policy</a> - <a href="http://www.google.com/intl/en/policies/terms/?ei=_GVJU9ijMMvuqgHscQ">Terms of Service</a></div></div>
+<script>
+var _ticker = 'NASDAQ:AGNC';
+setCompanyId(722355);
+var _slHeight = 302;
+var _external_target = "";
+var _prefs=_prefs||{};_prefs.hash="";
+_prefs.cc_compare=_prefs.cc_compare||{};
+_s_Store._numToDisplay = 4;
+_comparison_charts_Store._numToDisplay = 7;
+function initComparisonPage() {
+_chartConfigObject = {};
+_minZoomDays = 1;
+_chartConfigObject.hasNews = true;
+_chartConfigObject.displayName = 'AGNC';
+_chartConfigObject.minZoomDaysNormal = _minZoomDays;
+_chartConfigObject.volume = false;
+_chartConfigObject.defaultZoomDays = 3;
+_chartConfigObject.hasExtendedHours = 'false';
+_chartConfigObject.enableIndicator = true;
+_chartConfigObject.displayNewsPins = 'true';
+_chartConfigObject.inComparisonPage = true;
+_chartConfigObject.enableChartTypeButtons = false;
+var separator = '';
+_chartConfigObject.compareTo = '';
+_chartConfigObject.compareToDisplayName = '';
+_chartConfigObject.compareToDiffMarketSessions = '';
+var relatedTickers = [];
+relatedTickers.push({
+id: '722355',
+ticker: 'NASDAQ:AGNC',
+name: 'AGNC',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'NASDAQ:AGNC';
+_chartConfigObject.compareToDisplayName += separator + 'AGNC';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '718405',
+ticker: 'NYSE:ARR',
+name: 'ARR',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'NYSE:ARR';
+_chartConfigObject.compareToDisplayName += separator + 'ARR';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '728294',
+ticker: 'NYSE:WHX',
+name: 'WHX',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'NYSE:WHX';
+_chartConfigObject.compareToDisplayName += separator + 'WHX';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '1581658',
+ticker: 'NYSEARCA:EES',
+name: 'EES',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'NYSEARCA:EES';
+_chartConfigObject.compareToDisplayName += separator + 'EES';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '706403',
+ticker: 'TSE:BBO',
+name: 'BBO',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:BBO';
+_chartConfigObject.compareToDisplayName += separator + 'BBO';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '12846512',
+ticker: 'TSE:CBD',
+name: 'CBD',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:CBD';
+_chartConfigObject.compareToDisplayName += separator + 'CBD';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '704963',
+ticker: 'TSE:CHR.B',
+name: 'CHR.B',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:CHR.B';
+_chartConfigObject.compareToDisplayName += separator + 'CHR.B';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '695202',
+ticker: 'TSE:CWX',
+name: 'CWX',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:CWX';
+_chartConfigObject.compareToDisplayName += separator + 'CWX';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '707052',
+ticker: 'TSE:DFN',
+name: 'DFN',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:DFN';
+_chartConfigObject.compareToDisplayName += separator + 'DFN';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '573909725377020',
+ticker: 'TSE:DFN-A',
+name: 'DFN-A',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:DFN-A';
+_chartConfigObject.compareToDisplayName += separator + 'DFN-A';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '558915313085270',
+ticker: 'TSE:DGI',
+name: 'DGI',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:DGI';
+_chartConfigObject.compareToDisplayName += separator + 'DGI';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '717469',
+ticker: 'TSE:DPF.UN',
+name: 'DPF.UN',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:DPF.UN';
+_chartConfigObject.compareToDisplayName += separator + 'DPF.UN';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '674747',
+ticker: 'TSE:ERF',
+name: 'ERF',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:ERF';
+_chartConfigObject.compareToDisplayName += separator + 'ERF';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+relatedTickers.push({
+id: '591889012966230',
+ticker: 'TSE:EXE',
+name: 'EXE',
+timezone_offset: -18000,
+different_market_session: false,
+checked: true
+});
+_chartConfigObject.compareTo += separator + 'TSE:EXE';
+_chartConfigObject.compareToDisplayName += separator + 'EXE';
+_chartConfigObject.compareToDiffMarketSessions += separator + '0';
+separator = ';'
+_emitFlashChart("/finance/s/xfleaD-KX4A/chart9.swf?hl=en&gl=us",
+_ticker, _chartConfigObject,"http:\x2F\x2Fwww.google.com:80","chart_anchor", false, "NASDAQ:AGNC,NYSE:ARR,NYSE:WHX,NYSEARCA:EES,TSE:BBO,TSE:CBD,TSE:CHR.B,TSE:CWX,TSE:DFN,TSE:DFN-A,TSE:DGI,TSE:DPF.UN,TSE:ERF,TSE:EXE", relatedTickers);
+google.finance.onComparisonLoad();
+_initAutoFocus();
+_ac_register(function (input, event) {
+if (input.id == 'add_comparison_symbol') {
+_comparison_charts_Store.baseTicker = _ticker;
+return _comparison_charts_Store;
+}
+});
+}
+var _chartConfigObject;
+var _cleardot;
+var _companyName;
+var _eventid = '_GVJU9ijMMvuqgHscQ';
+var _expid;
+var _external_target;
+var _localDomain = 'www.google.com';
+var _minZoomDays;
+var _minZoomDaysNoIntraDay;
+var _prefs;
+var _ticker;
+var _urlSuffix;
+var google = google || {};
+google.finance = google.finance || {};
+google.finance.data = {common:{rq:{ct:""},up:"chg",down:"chr",linktargetInternal:"",hash:""},company:{news:{clusters:[{nrel:3,idx:0,id:"43982373288244",lead_story_url:"http://nysepost.com/the-recent-developments-in-armour-residential-reit-inc-nysearr-70507",a:[{t:"The Recent Developments In Armour Residential REIT, Inc. (NYSE:ARR)",u:"http://nysepost.com/the-recent-developments-in-armour-residential-reit-inc-nysearr-70507",s:"NYSE Post",sp:"Boston, MA - (NYSEPOST) - 04/09/2014 - There is a recent confirmation by Armour Residential REIT, Inc. (NYSE:ARR) regarding the cash dividends going to be distributed each month in the Q2 of the year 2014.",d:"Apr 9, 2014",tt:"1397045475",usg:"AFQjCNFB1U6Pxz7bUWoadGFHlaeZD2nHKA",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://nysepost.com/the-recent-developments-in-armour-residential-reit-inc-nysearr-70507\u0026cid=43982373288244\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNFVq_fhVjc3pAQijhPBNSvUNIcdKw"},{t:"Ex-Dividend Reminder: ARR, GGP and PNC",u:"http://www.forbes.com/sites/dividendchannel/2014/04/09/ex-dividend-reminder-arr-ggp-and-pnc/",s:"Forbes",sp:"Looking at the universe of stocks we cover at Dividend Channel, on 4/11/14, ARMOUR Residential REIT Inc. (NYSE: ARR), General Growth Properties Inc (NYSE: GGP), and PNC Financial Services Group (NYSE: PNC) will all trade ex-dividend for their\u0026nbsp;...",d:"Apr 9, 2014",tt:"1397052900",usg:"AFQjCNG8LUzqFq4VnNJP6DJFWRk5dcageA",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.forbes.com/sites/dividendchannel/2014/04/09/ex-dividend-reminder-arr-ggp-and-pnc/\u0026cid=43982373288244\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNGY7SA6J4JA2Qw0ErtDl13iJHUzAg"},{t:"Sizzling Penny Stocks - ARMOUR Residential REIT, (NYSE:ARR), Achillion ...",u:"http://www.techsonian.com/sizzling-penny-stocks-armour-residential-reit-nysearr-achillion-pharmaceuticals-achn-blackberry-bbry-hovnanian-enterprises-nysehov/12162772/",s:"Techsonian (press release)",sp:"Las Vegas, NV - April 09, 2014 - (TechSonian) - ARMOUR Residential REIT, (NYSE:ARR), is a Maryland corporation that invests primarily in fixed rate residential, adjustable rate and hybrid adjustable rate mortgage-backed securities issued or guaranteed\u0026nbsp;...",d:"Apr 9, 2014",tt:"1397050875",usg:"AFQjCNFJIpd5Y9Wg0sX0-m5HV2JZyW8anQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.techsonian.com/sizzling-penny-stocks-armour-residential-reit-nysearr-achillion-pharmaceuticals-achn-blackberry-bbry-hovnanian-enterprises-nysehov/12162772/\u0026cid=43982373288244\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNE5ZILyl6apVsq8tv82gT7MjMdhdg"}],lead_story_doc_id:"8585134442813306597"},{nrel:2,idx:1,id:"43982375157217",lead_story_url:"http://www.techsonian.com/stocks-alert-armour-residential-reit-inc-arr-antares-pharma-inc-atrs-new-gold-inc-usa-nysemktngd-radioshack-corporation-nysersh/12165166/",a:[{t:"Stocks Alert: ARMOUR Residential REIT, Inc. (ARR), Antares Pharma Inc (ATRS ...",u:"http://www.techsonian.com/stocks-alert-armour-residential-reit-inc-arr-antares-pharma-inc-atrs-new-gold-inc-usa-nysemktngd-radioshack-corporation-nysersh/12165166/",s:"Techsonian (press release)",sp:"Manhattan, NY- April 12, 2014 - (Techsonian) - ARMOUR Residential REIT, Inc. (NYSE:ARR) confirmed the Q2 2014 monthly cash dividends for the Company\u0026#39;s Common Stock and Series A and Series B Preferred Stock.",d:"1 hour ago",tt:"1397312100",usg:"AFQjCNFbY9fIqGCBfwHzRHZqeHnk0CV1aw",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.techsonian.com/stocks-alert-armour-residential-reit-inc-arr-antares-pharma-inc-atrs-new-gold-inc-usa-nysemktngd-radioshack-corporation-nysersh/12165166/\u0026cid=43982375157217\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNGNYOMPqixTlHlWu0lkPDp27Y9KFA"}],lead_story_doc_id:"12912253185791287453"},{nrel:116,idx:2,id:"43982374277594",lead_story_url:"http://www.nasdaq.com/article/armour-residential-reit-inc-arr-ex-dividend-date-scheduled-for-april-11-2014-cm343051",a:[{t:"ARMOUR Residential REIT, Inc. (ARR) Ex-Dividend Date Scheduled for April 11 ...",u:"http://www.nasdaq.com/article/armour-residential-reit-inc-arr-ex-dividend-date-scheduled-for-april-11-2014-cm343051",s:"NASDAQ",sp:"ARMOUR Residential REIT, Inc. ( ARR ) will begin trading ex-dividend on April 11, 2014. A cash dividend payment of $0.05 per share is scheduled to be paid on April 29, 2014.",d:"Apr 10, 2014",tt:"1397136598",usg:"AFQjCNFCv2jK4Fs6f1YQ3cl6JnSnQ3jYEg",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.nasdaq.com/article/armour-residential-reit-inc-arr-ex-dividend-date-scheduled-for-april-11-2014-cm343051\u0026cid=43982374277594\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNFeCR1F6ZqBmUoM6Y5Ik5Y_ECabRQ"}],lead_story_doc_id:"15723751358814306804"},{nrel:19,idx:3,id:"43982366599323",lead_story_url:"http://www.nasdaq.com/press-release/armour-residential-reit-inc-confirms-monthly-dividends-for-q2-2014-20140403-00550",a:[{t:"ARMOUR Residential REIT, Inc. Confirms Monthly Dividends for Q2 2014",u:"http://www.nasdaq.com/press-release/armour-residential-reit-inc-confirms-monthly-dividends-for-q2-2014-20140403-00550",s:"NASDAQ",sp:"VERO BEACH, Fla., April 3, 2014 (GLOBE NEWSWIRE) -- ARMOUR Residential REIT, Inc. (NYSE: ARR, ARR PrA and ARR PrB) (\u0026quot;ARMOUR\u0026quot; or the \u0026quot;Company\u0026quot;) today confirmed the Q2 2014 monthly cash dividends for the Company\u0026#39;s Common Stock and\u0026nbsp;...",d:"Apr 3, 2014",tt:"1396529775",usg:"AFQjCNH0SFaO_RxZEEyZAenDo6jq2zhXmA",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.nasdaq.com/press-release/armour-residential-reit-inc-confirms-monthly-dividends-for-q2-2014-20140403-00550\u0026cid=43982366599323\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNFoTqqoEt4b2M2lucDI7WAzb84AqQ"}],lead_story_doc_id:"12338179234461547462"},{nrel:59,idx:4,id:"43982353483851",lead_story_url:"http://www.marketwatch.com/story/american-capital-agency-corp-declares-first-quarter-dividend-on-its-series-a-preferred-stock-2014-03-20",a:[{t:"American Capital Agency Corp. Declares First Quarter Dividend on Its Series A ...",u:"http://www.marketwatch.com/story/american-capital-agency-corp-declares-first-quarter-dividend-on-its-series-a-preferred-stock-2014-03-20",s:"MarketWatch",sp:"BETHESDA, Md., March 20, 2014 /PRNewswire/ -- American Capital Agency Corp. (NASDAQ:AGNC) (\u0026quot;AGNC\u0026quot;) announced today that its Board of Directors has declared a cash dividend on its 8.000% Series A Cumulative Redeemable Preferred Stock (the\u0026nbsp;...",d:"Mar 20, 2014",tt:"1395345845",usg:"AFQjCNHYc6RnJpQwZHOBIBd3l3UYT-6y3w",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.marketwatch.com/story/american-capital-agency-corp-declares-first-quarter-dividend-on-its-series-a-preferred-stock-2014-03-20\u0026cid=43982353483851\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNEAjSI6heqOMlCfqc7Z3fhAI4ytTw"},{t:"American Capital Agency Corp. Declares First Quarter Dividend of $0.65 Per ...",u:"http://online.wsj.com/article/PR-CO-20140320-912816.html",s:"Wall Street Journal",sp:"BETHESDA, Md., March 20, 2014 /PRNewswire/ -- American Capital Agency Corp. (Nasdaq: AGNC) (\u0026quot;AGNC\u0026quot; or the \u0026quot;Company\u0026quot;) announced today that its Board of Directors has declared a cash dividend of $0.65 per share for the first quarter 2014.",d:"Mar 20, 2014",tt:"1395345150",usg:"AFQjCNFhuzPYJ8dHSGZfRVhY7u3fgJDiEA",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://online.wsj.com/article/PR-CO-20140320-912816.html\u0026cid=43982353483851\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNHP1ivV4SX0g-zypUdMYUAnaw2lGw"}],lead_story_doc_id:"2049593170891385084"},{idx:5,id:"0",lead_story_url:"http://seekingalpha.com/article/2101883-american-capital-agency-corp-the-dividend-now-looks-quite-sustainable",a:[{t:"American Capital Agency Corp.: The Dividend Now Looks Quite Sustainable",u:"http://seekingalpha.com/article/2101883-american-capital-agency-corp-the-dividend-now-looks-quite-sustainable",s:"Seeking Alpha",sp:"This marks the first quarter in nearly a year where AGNC has not lowered the dividend. AGNC has likely seen its NIM and book value increase in recent months.",d:"Mar 21, 2014",tt:"1395409937",usg:"AFQjCNEK7iQ6_3zbBuY-3pJVkh6o6A2bLQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://seekingalpha.com/article/2101883-american-capital-agency-corp-the-dividend-now-looks-quite-sustainable\u0026cid=0\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNHDUVove4tWkjh1z6sEQPfU4BCxZg"}],lead_story_doc_id:"8140672051606362104"},{nrel:7,idx:6,id:"43982350083458",lead_story_url:"http://www.thestreet.com/story/12532175/1/armour-residential-reit-inc-stock-downgraded-arr.html",a:[{t:"ARMOUR Residential REIT Inc Stock Downgraded (ARR)",u:"http://www.thestreet.com/story/12532175/1/armour-residential-reit-inc-stock-downgraded-arr.html",s:"TheStreet.com",sp:"Editor\u0026#39;s Note: Any reference to TheStreet Ratings and its underlying recommendation does not reflect the opinion of TheStreet, Inc. or any of its contributors including Jim Cramer or Stephanie Link.",d:"Mar 17, 2014",tt:"1395072450",usg:"AFQjCNGuWQB-dxqqfh2YsWhNyE9MwvPB9g",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.thestreet.com/story/12532175/1/armour-residential-reit-inc-stock-downgraded-arr.html\u0026cid=43982350083458\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNEku6y_fWBd9LlBCAXulrmJ15UoOg"}],lead_story_doc_id:"18240620209214163642"},{nrel:39,idx:7,id:"43982363521661",lead_story_url:"http://www.gaininggreen.com/basic-material-top-losers-whiting-usa-trust-nysewhx-magnegas-corporation-nasdaqmnga-amyris-nasdaqamrs-hyperdynamics-corporation-nysehdy/1218550/",a:[{t:"Basic Material Top losers: Whiting USA Trust (NYSE:WHX), MagneGas ...",u:"http://www.gaininggreen.com/basic-material-top-losers-whiting-usa-trust-nysewhx-magnegas-corporation-nasdaqmnga-amyris-nasdaqamrs-hyperdynamics-corporation-nysehdy/1218550/",s:"Gaining Green",sp:"Russian Hill Capital, LP, would like to make investors aware of new language that The Bank of New York Mellon Trust Company (the ?Trustee?) has included in the latest annual report for Whiting USA Trust (NYSE:WHX).",d:"Mar 29, 2014",tt:"1396116000",usg:"AFQjCNEI6GUIsu3gKHgG0rJPotiwYBz_JQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.gaininggreen.com/basic-material-top-losers-whiting-usa-trust-nysewhx-magnegas-corporation-nasdaqmnga-amyris-nasdaqamrs-hyperdynamics-corporation-nysehdy/1218550/\u0026cid=43982363521661\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNGdJjbTASfp8SCs4FNu9QLpui1tGA"}],lead_story_doc_id:"3428498664527582280"},{nrel:11,idx:8,id:"43982363257122",lead_story_url:"http://scibilitymedia.com/whiting-usa-trust-nysewhx-trust-sinks-on-warnings-of-steep-depreciation-1867",a:[{t:"Whiting USA Trust (NYSE:WHX) Trust Sinks On Warnings Of Steep Depreciation",u:"http://scibilitymedia.com/whiting-usa-trust-nysewhx-trust-sinks-on-warnings-of-steep-depreciation-1867",s:"Scibility Media",sp:"Whiting USA Trust (NYSE:WHX) which is a trust involved in the extraction and sale of oil and gas. On 13th March, this oil and gas trust filed a Form 10-K to SEC as part of its annual operational report.",d:"Mar 31, 2014",tt:"1396268550",usg:"AFQjCNHxyrToFAp5ZSuWc3vX1qFbQAUQ1Q",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://scibilitymedia.com/whiting-usa-trust-nysewhx-trust-sinks-on-warnings-of-steep-depreciation-1867\u0026cid=43982363257122\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNGQAUFtzODBXvZD5V7Yatfl8gw3-w"},{t:"Whiting USA Trust (NYSE:WHX) Trust Hurtles Down As Its Fixed Term Gets ...",u:"http://www.financialstrend.com/whiting-usa-trust-nysewhx-trust-hurtles-down-as-its-fixed-term-gets-shortened-drastically-16466.html",s:"FinancialsTrend",sp:"Dallas, Texas 03/31/2014 (FINANCIALSTRENDS) - Whiting USA Trust (NYSE:WHX) saw its market cap plummet by close to 35 percent during trading March, on the back of analysts explaining the import of the firm\u0026#39;s submission to SEC in its on 28th annual\u0026nbsp;...",d:"Mar 31, 2014",tt:"1396270575",usg:"AFQjCNFMmXDy1LaRmtAhHNDj9x2tC9dGOQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.financialstrend.com/whiting-usa-trust-nysewhx-trust-hurtles-down-as-its-fixed-term-gets-shortened-drastically-16466.html\u0026cid=43982363257122\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNFTxQ1NqSgLqv60BYNvRirERlk7Dg"},{t:"7 Big Selloffs: Whiting USA Trust (WHX), DynaVox (DVOX), ZBB Energy (ZBB ...",u:"http://www.marketsemerging.com/7-big-selloffs-whiting-usa-trust-whx-dynavox-dvox-zbb-energy-zbb-geomet-gmet-spherix-spex-china-recycling-energy-creg-magnegas-corporation-mnga/176567/",s:"Markets Emerging",sp:"Whiting USA Trust (NYSE:WHX) tumbled 35.06% on Friday after Russian Hill Capital, LP said it would like to make investors aware of new language that The Bank of New York Mellon Trust Company has included in the latest annual report for Whiting USA\u0026nbsp;...",d:"Mar 31, 2014",tt:"1396263150",usg:"AFQjCNEEXlm7VHSKLwtw3I_Ao8-n2CZkLQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.marketsemerging.com/7-big-selloffs-whiting-usa-trust-whx-dynavox-dvox-zbb-energy-zbb-geomet-gmet-spherix-spex-china-recycling-energy-creg-magnegas-corporation-mnga/176567/\u0026cid=43982363257122\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNGVc4zhmIzyJ1TA_j2haVfRu-GP1Q"}],lead_story_doc_id:"10197730544787588653"},{idx:9,id:"0",lead_story_url:"http://www.techsonian.com/investors-alert-aurico-gold-inc-auq-armour-residential-reit-inc-nysearr-companhia-siderurgica-nacional-adr-sid-pdl-biopharma-inc-pdli/12164658/",a:[{t:"Investor\u0026#39;s Alert - AuRico Gold Inc (AUQ), ARMOUR Residential REIT, Inc (NYSE ...",u:"http://www.techsonian.com/investors-alert-aurico-gold-inc-auq-armour-residential-reit-inc-nysearr-companhia-siderurgica-nacional-adr-sid-pdl-biopharma-inc-pdli/12164658/",s:"Techsonian (press release)",sp:"Las Vegas, NV - April 11, 2014 - (Tech Sonian) - AuRico Gold Inc (NYSE:AUQ) recently declared that it will release the Company\u0026#39;s first quarter financial results for the period ended March 31, 2014 after market close on Thursday, May 8, 2014.",d:"Apr 11, 2014",tt:"1397223000",usg:"AFQjCNFwv5bjF7LS-ezDF3OI4gskS6DTkQ",sru:"http://news.google.com/news/url?sa=T\u0026ct2=us\u0026fd=S\u0026url=http://www.techsonian.com/investors-alert-aurico-gold-inc-auq-armour-residential-reit-inc-nysearr-companhia-siderurgica-nacional-adr-sid-pdl-biopharma-inc-pdli/12164658/\u0026cid=0\u0026ei=_GVJU9ijMMvuqgHscQ\u0026usg=AFQjCNFQwGywiu1MEdHe8x3SHIad1VVHZg"}],lead_story_doc_id:"2269700670509551067"},{idx:10,id:"-1"}],results_per_page:10,result_start_num:1,result_end_num:10,result_total_articles:187},related:{cols:[0,1,2,37,4,30,34,31,10,11,5,14,27,7,8,21,22,33,3],rows:[{id:"722355",values:["AGNC","American Capital Agency Corp.","NASDAQ","USD","22.39","+0.06","chg","0.27","3.24","6.91","7.97B","4.35","1.19","1.42","12.93","64.37","63.71","722355","AGNC"]},{id:"718405",values:["ARR","ARMOUR Residential REIT, Inc.","NYSE","USD","4.16","-0.03","chr","-0.72","0.32","12.83","1.49B","0.81","0.00","-1.02","-9.56","-55.86","-55.86","718405","ARR"]},{id:"728294",values:["WHX","Whiting USA Trust","NYSE","USD","2.71","+0.01","chg","0.37","2.08","1.30","37.57M","2.65","0.00","94.04","94.04","96.91","96.91","728294","WHX"]},{id:"1581658",values:["EES","WisdomTree SmallCap Earnings Fund (ETF)","NYSEARCA","USD","78.24","-1.19","chr","-1.50","","","428.87M","","","","","","","1581658","EES"]},{id:"706403",values:["BBO","Big Bank Big Oil Split Corp.","TSE","CAD","11.05","+0.10","chg","0.91","0.79","13.99","34.00M","","","","","","","706403","BBO"]},{id:"12846512",values:["CBD","ISHARES BALANCED INCOME CORE FUND","TSE","CAD","20.88","-0.20","chr","-0.95","0.00","","79.58M","","","","","","","12846512","CBD"]},{id:"704963",values:["CHR.B","Chorus Aviation Inc","TSE","CAD","3.68","-0.02","chr","-0.54","0.50","7.41","450.95M","0.60","44.70","12.75","73.46","7.52","5.91","704963","CHR.B"]},{id:"695202",values:["CWX","CanWel Building Materials Group Ltd.","TSE","CAD","2.75","-0.10","chr","-3.51","0.16","17.33","157.81M","0.28","45.81","3.41","8.50","2.54","1.25","695202","CWX"]},{id:"707052",values:["DFN","Dividend 15 Split Corp.","TSE","CAD","11.68","-0.07","chr","-0.60","2.41","4.84","258.61M","","","","","","","707052","DFN"]},{id:"573909725377020",values:["DFN-A","Dividend 15 Split Corp.","TSE","CAD","10.23","0.00","chb","0.00","2.41","4.24","260.15M","1.20","0.00","10.11","16.61","68.95","265.80","573909725377020","DFN-A"]},{id:"558915313085270",values:["DGI","DATA GROUP LTD","TSE","CAD","0.820","-0.020","chr","-2.38","-2.74","","19.73M","","","","","","","558915313085270","DGI"]},{id:"717469",values:["DPF.UN","DPF India Opportunities Fund","TSE","CAD","3.82","-0.03","chr","-0.78","0.16","23.88","78.07M","","","","","","","717469","DPF.UN"]},{id:"674747",values:["ERF","Enerplus Corp","TSE","CAD","23.25","+0.31","chg","1.35","0.24","97.08","4.73B","1.08","27.85","1.31","2.47","11.77","3.66","674747","ERF"]},{id:"591889012966230",values:["EXE","EXTENDICARE INC","TSE","CAD","6.74","-0.03","chr","-0.44","0.06","112.33","591.87M","","","","","","","591889012966230","EXE"]}],visible_cols:[0,1,2,37,4,30,34,31,10,11,5,14,27,7,8,21,22]}},stickyUrlArgs:"\u0026ei=_GVJU9ijMMvuqgHscQ",chart:{_5d:"EXCHANGE%3DNASDAQ\nMARKET_OPEN_MINUTE=570\nMARKET_CLOSE_MINUTE=960\nINTERVAL=120\nCOLUMNS=DATE,CLOSE,VOLUME\nDATA=\nTIMEZONE_OFFSET=-240\na1396877400,21.74,34421\n1,21.85,25929\n2,21.92,22267\n3,21.95,58578\n4,22.05,125853\n5,22.09,33933\n6,22.105,128631\n7,22.1001,19484\n8,22.12,62766\n9,22.135,40775\n10,22.07,80424\n11,22.1,71415\n12,22.0912,9560\n13,22.09,52583\n14,22.075,34829\n15,22.085,40723\n16,22.095,40895\n17,22.1,8797\n18,22.0868,19772\n19,22.1,47412\n20,22.08,40275\n21,22.09,38112\n22,22.1,46343\n23,22.09,63197\n24,22.1,18251\n25,22.1,599\n26,22.1,24194\n27,22.1197,44156\n28,22.115,39507\n29,22.1125,2322\n30,22.095,45715\n31,22.0901,11761\n32,22.0937,2752\n33,22.0999,8628\n34,22.06,21788\n35,22.06,21410\n36,22.055,36254\n37,22.0401,25122\n38,22.07,16458\n39,22.05,27057\n40,22.06,4700\n41,22.06,17125\n42,22.105,29168\n43,22.12,13052\n44,22.1401,27812\n45,22.125,20045\n46,22.125,3909\n47,22.13,7622\n48,22.11,27887\n49,22.108,16300\n50,22.105,750\n51,22.031,19459\n52,22.01,14844\n53,22.015,18389\n54,22.02,8463\n55,22.02,7143\n56,22.04,7202\n57,22.02,6300\n58,22.015,10410\n59,22.015,10702\n60,22.01,9756\n61,22.0201,23822\n62,22.01,23512\n63,21.995,72761\n64,21.975,10217\n65,21.99,9735\n66,21.9801,6337\n67,21.995,20845\n68,22,20788\n69,21.9983,6418\n70,22,12755\n71,21.99,9400\n72,21.995,4332\n73,22,1700\n74,22,15686\n75,21.99,7526\n76,21.9944,13260\n77,21.99,9792\n78,21.97,5150\n79,21.97,22610\n80,21.96,7124\n81,21.96,4000\n82,21.97,20444\n83,21.96,4215\n84,21.96,4666\n85,21.965,5713\n86,21.98,9350\n87,21.94,25918\n88,21.98,6106\n89,21.974,956\n90,21.96,17654\n91,21.98,13029\n92,21.98,3200\n93,21.98,1627\n94,22,8885\n95,21.98,6345\n96,21.97,4600\n97,21.9725,3342\n98,21.97,10400\n99,21.95,4921\n100,21.95,20802\n101,21.935,12037\n102,21.945,6379\n103,21.955,4850\n104,21.955,5293\n105,21.95,4150\n106,21.965,15700\n107,21.97,2257\n108,21.965,4700\n109,21.96,34339\n110,21.94,34055\n111,21.96,26640\n112,21.97,14036\n113,21.9799,5600\n114,21.98,2900\n115,21.98,1500\n116,21.98,4256\n117,21.98,19430\n118,21.98,7598\n119,21.99,33792\n120,22.015,41228\n121,21.9908,18897\n122,21.985,6215\n123,21.98,1800\n124,21.97,7050\n125,21.975,2550\n126,21.975,4632\n127,21.97,6875\n128,21.975,1500\n129,21.97,3800\n130,21.975,4156\n131,21.97,5100\n132,21.95,36480\n133,21.935,33660\n134,21.93,9951\n135,21.93,17340\n136,21.961,34832\n137,22,21505\n138,22,32407\n139,22.0002,3025\n140,22,35131\n141,21.98,44679\n142,21.98,500\n143,21.98,9199\n144,21.98,4421\n145,21.98,2425\n146,21.97,5109\n147,21.98,5327\n148,21.97,3800\n149,21.975,3972\n150,21.98,5055\n151,21.971,8418\n152,21.98,3223\n153,22,42812\n154,22.01,10930\n155,22.01,7450\n156,22.01,10448\n157,22.005,4073\n158,22.01,10388\n159,22.01,62656\n160,22.01,1300\n161,22.0144,41299\n162,22.015,3443\n163,22.02,1654\n164,22.025,8700\n165,21.995,40709\n166,21.99,13006\n167,21.97,29746\n168,21.97,7693\n169,21.97,6644\n170,21.97,19073\n171,21.975,5800\n172,21.97,60820\n173,21.95,24899\n174,21.955,2700\n175,21.955,4500\n176,21.94,18640\n177,21.9399,13856\n178,21.935,4000\n179,21.94,52138\n180,21.97,25227\n181,21.96,12200\n182,21.94,27901\n183,21.955,119180\n184,21.97,15604\n185,21.975,5294\n186,21.98,6395\n187,21.95,42293\n188,21.955,10551\n189,21.975,22488\n190,21.99,27139\n191,21.97,69894\n192,21.97,13696\n193,21.975,98511\n194,21.95,84230\n195,21.955,208129\n720,21.92,21399\n721,21.99,23977\n722,22,3565\n723,22.039,13002\n724,22.03,32780\n725,22,24799\n726,22.0056,13020\n727,22.02,10529\n728,22.015,10657\n729,21.99,175319\n730,22.027,37445\n731,22.035,71179\n732,22.1,89095\n733,22.06,138044\n734,22.05,39793\n735,22.05,42483\n736,22.06,25548\n737,22.021,22067\n738,21.99,7975\n739,21.99,11600\n740,21.9801,5240\n741,21.981,649\n742,21.978,13731\n743,21.98,5612\n744,21.98,12546\n745,21.99,24700\n746,21.98,15909\n747,21.99,7000\n748,21.99,34105\n749,21.99,5300\n750,21.99,23263\n751,21.985,4800\n752,21.99,5333\n753,21.99,49451\n754,21.99,600\n755,21.99,3250\n756,22,14277\n757,22.03,63200\n758,22.05,8900\n759,22.0399,17203\n760,22.03,12367\n761,22.06,43341\n762,22.049,4683\n763,22.061,30107\n764,22.05,37381\n765,22.06,7764\n766,22.0783,45399\n767,22.085,26093\n768,22.075,20400\n769,22.08,13337\n770,22.075,5200\n771,22.0797,6375\n772,22.08,49410\n773,22.08,20269\n774,22.065,34521\n775,22.08,18295\n776,22.08,20676\n777,22.08,10985\n778,22.07,10900\n779,22.0601,875\n780,22.08,5244\n781,22.0799,17784\n782,22.08,2700\n783,22.08,27493\n784,22.079,18342\n785,22.08,2600\n786,22.06,41968\n787,22.085,28947\n788,22.08,42937\n789,22.0601,20671\n790,22.09,22365\n791,22.07,27011\n792,22.08,6600\n793,22.07,35050\n794,22.07,16805\n795,22.07,19422\n796,22.06,14040\n797,22.07,1800\n798,22.06,3110\n799,22.07,3900\n800,22.07,3803\n801,22.07,1800\n802,22.05,32024\n803,22.06,14115\n804,22.061,279\n805,22.03,19774\n806,22.035,2750\n807,22.035,1000\n808,22.045,17576\n809,22.04,1300\n810,22.05,2575\n811,22.03,21814\n812,22.03,14480\n813,22.035,1408\n814,22.04,3466\n815,22.034,4018\n816,22.045,6945\n817,22.04,5957\n818,22.0383,536\n819,22.04,500\n820,22.04,10097\n821,22.039,1900\n822,22.04,1758\n823,22.04,1213\n824,22.04,19082\n825,22.04,5950\n826,22.04,5600\n827,22.04,7615\n828,22.0299,15594\n829,22.03,7200\n830,22.04,500\n831,22.04,854\n832,22.0349,2246\n833,22.03,6578\n834,22.02,12901\n835,22.01,1700\n836,22.0175,29232\n837,22.02,19656\n838,22.0104,1550\n839,22.02,3850\n840,22.04,15122\n841,22.04,21076\n842,22.03,7297\n843,22.031,1662\n844,22.03,1200\n845,22.035,500\n846,22.034,459\n847,22.045,5900\n848,22.04,600\n849,22.03,10377\n850,22.0401,4187\n851,22.045,1539\n852,22.04,1500\n853,22.045,1300\n854,22.05,5100\n855,22.055,30462\n856,22.02,58399\n857,22.045,10252\n858,22.045,2696\n859,22.045,4250\n860,22.045,7601\n861,22.0425,17378\n862,22.05,1762\n863,22.045,15746\n864,22.05,20843\n865,22.0499,4385\n866,22.03,23500\n867,22.02,38300\n868,22.02,800\n869,22.02,2550\n870,22.02,7367\n871,22.03,5948\n872,22.04,2700\n873,22.04,1844\n874,22.02,20256\n875,22.02,800\n876,22.02,2215\n877,22.0201,2690\n878,22.01,13323\n879,22.01,3464\n880,22.02,2300\n881,22.02,4900\n882,22.02,1800\n883,22.03,26375\n884,22.03,20345\n885,22.03,1700\n886,22.03,4700\n887,22.025,27948\n888,22.03,19459\n889,22.03,6906\n890,22.03,13390\n891,22.023,7310\n892,22.03,226901\n893,22.0204,9081\n894,22.035,450626\n895,22.05,425163\n896,22.07,16690\n897,22.07,38753\n898,22.07,15792\n899,22.075,13937\n900,22.08,47861\n901,22.09,24213\n902,22.095,16398\n903,22.095,6000\n904,22.095,15558\n905,22.09,7800\n906,22.1,21598\n907,22.11,31837\n908,22.09,78029\n909,22.095,9985\n910,22.1,95130\n911,22.1,106906\n912,22.08,157574\n913,22.07,163347\n914,22.0603,130838\n915,22.07,401131\n916,22.07,143\na1397050200,22.08,17955\n1,22.035,6816\n2,22.005,32537\n3,22.015,43454\n4,22.07,162926\n5,22.13,54951\n6,22.11,21247\n7,22.08,17169\n8,22.06,28839\n9,22.06,17070\n10,22.08,8550\n11,22.07,2521\n12,22.082,10214\n13,22.08,9441\n14,22.08,8823\n15,22.08,22473\n16,22.07,16181\n17,22.085,23025\n18,22.095,17319\n19,22.095,10206\n20,22.12,31076\n21,22.14,21960\n22,22.11,64124\n23,22.13,38538\n24,22.14,22318\n25,22.155,16995\n26,22.151,18488\n27,22.13,25374\n28,22.14,13300\n29,22.15,46352\n30,22.17,4660\n31,22.18,43422\n32,22.17,4500\n33,22.16,7398\n34,22.1604,2800\n35,22.161,51076\n36,22.16,1894\n37,22.15,12144\n38,22.16,5214\n39,22.165,1700\n40,22.16,44009\n41,22.17,26085\n42,22.17,38090\n43,22.175,6700\n44,22.18,2978\n45,22.15,7606\n46,22.15,14576\n47,22.165,78655\n48,22.17,5648\n49,22.17,11182\n50,22.16,9500\n51,22.1604,10639\n52,22.16,2000\n53,22.16,1350\n54,22.16,32552\n55,22.16,2976\n56,22.16,3638\n57,22.16,16693\n58,22.16,752\n59,22.16,7651\n60,22.16,6316\n61,22.15,12404\n62,22.151,8660\n63,22.155,500\n64,22.1599,3518\n65,22.1556,1650\n66,22.16,14347\n67,22.16,5304\n68,22.15,3600\n69,22.1511,7828\n70,22.1501,8509\n71,22.159,1639\n72,22.16,7908\n73,22.16,3683\n74,22.16,2200\n75,22.155,2667\n76,22.16,875\n77,22.15,3140\n78,22.155,2200\n79,22.1599,3312\n80,22.16,2890\n81,22.16,4000\n82,22.16,2768\n83,22.156,2025\n84,22.16,7008\n85,22.16,5200\n86,22.155,2300\n87,22.16,7760\n88,22.155,30503\n89,22.16,6200\n90,22.155,9202\n91,22.15,5633\n92,22.155,2189\n93,22.155,8546\n94,22.15,6729\n95,22.145,179707\n96,22.16,36663\n97,22.155,8006\n98,22.15,6954\n99,22.155,4100\n100,22.155,20182\n101,22.13,84453\n102,22.12,28116\n103,22.145,68554\n104,22.14,6980\n105,22.14,7400\n106,22.145,14084\n107,22.14,12106\n108,22.15,7967\n109,22.17,32900\n110,22.165,5739\n111,22.156,9701\n112,22.15,6737\n113,22.1513,5266\n114,22.15,5029\n115,22.154,13008\n116,22.15,22124\n117,22.15,8306\n118,22.1501,3656\n119,22.15,5745\n120,22.15,5804\n121,22.14,15907\n122,22.1101,10424\n123,22.1,6104\n124,22.08,6060\n125,22.07,8160\n126,22.075,18676\n127,22.0818,24043\n128,22.08,5533\n129,22.09,7102\n130,22.085,5688\n131,22.08,6800\n132,22.06,28659\n133,22.059,7524\n134,22.05,7832\n135,22.05,11779\n136,22.15,82069\n137,22.1615,11308\n138,22.19,92903\n139,22.13,59483\n140,22.135,18970\n141,22.17,6589\n142,22.16,7742\n143,22.18,12635\n144,22.225,57908\n145,22.27,192349\n146,22.32,114124\n147,22.315,35676\n148,22.3,31896\n149,22.33,149186\n150,22.32,18613\n151,22.3172,9577\n152,22.3125,15193\n153,22.302,48828\n154,22.31,2783\n155,22.301,6191\n156,22.3,52956\n157,22.3125,11741\n158,22.32,5050\n159,22.3125,2248\n160,22.3,14301\n161,22.31,8176\n162,22.31,8900\n163,22.315,11886\n164,22.32,2000\n165,22.32,6184\n166,22.32,10050\n167,22.3,14023\n168,22.3,13246\n169,22.305,8546\n170,22.31,29603\n171,22.305,8733\n172,22.305,1995\n173,22.305,9889\n174,22.31,53717\n175,22.305,6042\n176,22.3201,40286\n177,22.33,5550\n178,22.3201,52272\n179,22.33,4019\n180,22.33,5544\n181,22.33,9888\n182,22.33,5576\n183,22.335,16115\n184,22.33,23774\n185,22.33,8400\n186,22.31,46779\n187,22.33,25275\n188,22.325,16264\n189,22.33,29306\n190,22.325,12599\n191,22.33,38081\n192,22.33,35061\n193,22.325,28258\n194,22.315,150647\n195,22.31,429943\n720,22.27,19608\n721,22.24,6356\n722,22.27,9699\n723,22.36,23826\n724,22.3825,35949\n725,22.42,20004\n726,22.43,13150\n727,22.45,24159\n728,22.42,29675\n729,22.44,8100\n730,22.431,8225\n731,22.4601,18683\n732,22.4468,28356\n733,22.44,26186\n734,22.415,6492\n735,22.4151,17695\n736,22.38,23441\n737,22.37,2900\n738,22.39,8096\n739,22.4,4414\n740,22.4,7221\n741,22.42,71811\n742,22.41,11841\n743,22.4017,6553\n744,22.42,24242\n745,22.42,4600\n746,22.42,7263\n747,22.42,98523\n748,22.45,156994\n749,22.44,103916\n750,22.4589,10347\n751,22.4401,9987\n752,22.45,1900\n753,22.45,5040\n754,22.45,1000\n755,22.4417,3750\n756,22.45,16811\n757,22.47,23839\n758,22.47,5205\n759,22.46,17070\n760,22.44,9800\n761,22.44,24415\n762,22.45,5600\n763,22.45,3122\n764,22.47,17045\n765,22.47,10955\n766,22.459,31820\n767,22.44,78439\n768,22.46,14907\n769,22.4502,4652\n770,22.4699,16494\n771,22.45,172753\n772,22.46,30565\n773,22.485,26020\n774,22.4799,22003\n775,22.4646,37613\n776,22.45,21299\n777,22.45,5896\n778,22.455,14754\n779,22.455,20697\n780,22.455,21188\n781,22.45,2797\n782,22.41,38616\n783,22.415,9566\n784,22.43,25049\n785,22.43,7194\n786,22.44,16048\n787,22.46,16049\n788,22.445,211340\n789,22.45,37244\n790,22.445,2079\n791,22.44,900\n792,22.445,2783\n793,22.445,2880\n794,22.43,41524\n795,22.42,16564\n796,22.43,2500\n797,22.42,35552\n798,22.43,7419\n799,22.4317,350\n800,22.43,1870\n801,22.43,5784\n802,22.43,1100\n803,22.421,2105\n804,22.415,21146\n805,22.38,42855\n806,22.3699,41889\n807,22.38,72468\n808,22.41,62300\n809,22.375,9057\n810,22.39,19850\n811,22.3873,2900\n812,22.3801,1770\n813,22.39,1250\n814,22.37,3546\n815,22.3699,6052\n816,22.38,29237\n817,22.38,15361\n818,22.37,7007\n819,22.3599,21099\n820,22.36,3700\n821,22.35,5769\n822,22.345,6039\n823,22.335,2700\n824,22.32,14687\n825,22.33,18623\n826,22.33,21789\n827,22.32,4031\n828,22.34,4930\n829,22.36,4649\n830,22.3563,2700\n831,22.36,2300\n832,22.359,1200\n833,22.34,4791\n834,22.3249,5810\n835,22.33,4619\n836,22.31,15967\n837,22.31,1857\n838,22.335,42464\n839,22.37,9164\n840,22.4,93994\n841,22.39,3700\n842,22.3899,19654\n843,22.38,11133\n844,22.39,2425\n845,22.38,500\n846,22.4,58629\n847,22.4,20656\n848,22.405,45304\n849,22.42,9788\n850,22.42,9196\n851,22.4,61270\n852,22.41,13890\n853,22.41,14622\n854,22.405,1000\n855,22.402,2443\n856,22.435,39660\n857,22.44,998\n858,22.44,1000\n859,22.435,25430\n860,22.44,12220\n861,22.439,22380\n862,22.42,42009\n863,22.43,4953\n864,22.44,3714\n865,22.45,9871\n866,22.45,2385\n867,22.45,1703\n868,22.43,15675\n869,22.405,10580\n870,22.435,85186\n871,22.43,8438\n872,22.44,6492\n873,22.42,8818\n874,22.45,15096\n875,22.445,3125\n876,22.45,5974\n877,22.45,3327\n878,22.44,4316\n879,22.4349,24484\n880,22.428,6352\n881,22.408,32230\n882,22.409,32870\n883,22.4,13228\n884,22.395,6110\n885,22.395,2300\n886,22.4,12791\n887,22.37,19503\n888,22.38,32018\n889,22.36,20698\n890,22.34,48182\n891,22.33,11231\n892,22.3,7101\n893,22.295,35815\n894,22.32,14620\n895,22.35,44033\n896,22.35,57998\n897,22.35,15101\n898,22.355,4270\n899,22.345,13200\n900,22.34,5516\n901,22.36,19729\n902,22.35,14093\n903,22.345,51311\n904,22.36,17299\n905,22.36,28492\n906,22.345,14176\n907,22.36,44572\n908,22.34,29063\n909,22.355,40969\n910,22.355,20789\n911,22.365,73595\n912,22.365,19682\n913,22.36,31821\n914,22.34,91192\n915,22.33,139786\na1397223000,22.32,18152\n1,22.3,6276\n2,22.391,31167\n3,22.45,154374\n4,22.265,27470\n5,22.28,11045\n6,22.29,61150\n7,22.305,18602\n8,22.3299,16411\n9,22.3,14809\n10,22.33,27326\n11,22.28,9232\n12,22.33,3500\n13,22.35,9542\n14,22.36,5135\n15,22.4,13325\n16,22.43,13124\n17,22.425,7708\n18,22.42,9419\n19,22.4399,3398\n20,22.44,9935\n21,22.432,11131\n22,22.435,11488\n23,22.45,21267\n24,22.4701,19660\n25,22.52,101470\n26,22.53,28966\n27,22.5101,25364\n28,22.49,30618\n29,22.49,67538\n30,22.4999,13848\n31,22.48,34166\n32,22.49,30313\n33,22.49,32130\n34,22.48,60394\n35,22.46,56780\n36,22.475,25995\n37,22.495,65105\n38,22.471,20262\n39,22.47,2823\n40,22.44,96550\n41,22.435,32564\n42,22.435,15915\n43,22.43,9731\n44,22.455,2905\n45,22.48,9034\n46,22.48,14399\n47,22.485,2684\n48,22.455,24200\n49,22.455,4754\n50,22.47,22383\n51,22.47,9941\n52,22.47,9331\n53,22.46,3606\n54,22.46,7500\n55,22.45,3600\n56,22.47,8183\n57,22.48,6000\n58,22.47,8522\n59,22.455,7100\n60,22.48,6300\n61,22.4725,8656\n62,22.4708,3000\n63,22.48,13121\n64,22.48,12413\n65,22.485,16908\n66,22.475,20234\n67,22.485,17897\n68,22.48,24921\n69,22.471,20904\n70,22.48,3314\n71,22.486,9296\n72,22.4683,8700\n73,22.47,19052\n74,22.47,1100\n75,22.48,19770\n76,22.48,6403\n77,22.48,6741\n78,22.48,28812\n79,22.485,15955\n80,22.485,14404\n81,22.485,6100\n82,22.4601,19709\n83,22.459,8679\n84,22.47,36008\n85,22.47,15164\n86,22.465,1600\n87,22.451,18677\n88,22.46,3600\n89,22.48,13024\n90,22.48,3250\n91,22.48,9803\n92,22.4762,5795\n93,22.48,5855\n94,22.475,3950\n95,22.47,4810\n96,22.48,5726\n97,22.48,3300\n98,22.48,4315\n99,22.48,9520\n100,22.48,9130\n101,22.48,15418\n102,22.48,8700\n103,22.479,6834\n104,22.48,4626\n105,22.48,4865\n106,22.48,13241\n107,22.48,3830\n108,22.48,13998\n109,22.48,7200\n110,22.48,40519\n111,22.48,10956\n112,22.48,11316\n113,22.48,2306\n114,22.47,2820\n115,22.48,11218\n116,22.475,5365\n117,22.48,3183\n118,22.47,2800\n119,22.475,1880\n120,22.48,2050\n121,22.48,6680\n122,22.465,16250\n123,22.47,19530\n124,22.465,25702\n125,22.4601,6127\n126,22.465,5100\n127,22.465,14330\n128,22.465,1900\n129,22.469,8145\n130,22.47,1375\n131,22.47,2300\n132,22.47,24210\n133,22.47,4254\n134,22.47,6225\n135,22.47,2797\n136,22.47,14988\n137,22.45,14649\n138,22.46,1834\n139,22.4499,38393\n140,22.445,5601\n141,22.45,3906\n142,22.45,2900\n143,22.4499,23264\n144,22.44,19876\n145,22.435,2300\n146,22.425,4837\n147,22.4101,12927\n148,22.4301,23100\n149,22.44,1300\n150,22.435,17538\n151,22.4379,1465\n152,22.42,12661\n153,22.425,1700\n154,22.425,2600\n155,22.4126,5006\n156,22.415,2295\n157,22.405,25847\n158,22.4006,6400\n159,22.39,14425\n160,22.36,22786\n161,22.36,3593\n162,22.36,9726\n163,22.36,9412\n164,22.36,6030\n165,22.365,6568\n166,22.35,13884\n167,22.335,22827\n168,22.335,7405\n169,22.335,5600\n170,22.36,36306\n171,22.35,12975\n172,22.3401,3690\n173,22.345,2934\n174,22.34,5471\n175,22.345,4627\n176,22.345,25610\n177,22.345,9138\n178,22.33,8431\n179,22.37,21279\n180,22.38,8400\n181,22.38,3400\n182,22.3799,4883\n183,22.4,15341\n184,22.4,6258\n185,22.4,16549\n186,22.39,28063\n187,22.41,40512\n188,22.41,14253\n189,22.41,6018\n190,22.41,14663\n191,22.4089,37986\n192,22.4,25915\n193,22.41,47458\n194,22.415,37744\n195,22.39,202034\n",_5Y:"EXCHANGE%3DNASDAQ\nMARKET_OPEN_MINUTE=570\nMARKET_CLOSE_MINUTE=960\nINTERVAL=604800\nCOLUMNS=DATE,CLOSE,VOLUME,CDAYS\nDATA=\nTIMEZONE_OFFSET=-240\na1239998400,17.51,435619,5\n1,17.05,513632,5\n2,18.39,1055086,5\n3,18.69,871955,5\n4,18.85,680436,5\n5,19.2,659433,5\n6,18.99,494167,4\n7,19.89,936896,5\n8,19.16,1530344,5\n9,20.79,757534,5\n10,23.89,2614117,5\na1246593600,22.18,1930927,4\na1247256000,21.88,994074,5\n1,22.02,3229930,5\n2,23.41,2084911,5\n3,22.78,2288935,5\n4,24.56,1938963,5\n5,23.4,6819347,5\n6,24.79,2578488,5\n7,25.21,2338892,5\n8,25.43,1938044,5\n9,27.11,1337375,4\n10,28.46,2259835,5\n11,29.68,4154518,5\n12,27.32,4771358,5\n13,27.65,1637886,5\n14,27.52,2468320,5\n15,28.72,2586295,5\n16,26,9784397,5\nTIMEZONE_OFFSET=-300\na1257541200,25.87,2767198,5\n1,25.47,2368843,5\n2,26.17,1484940,5\na1259344800,25.87,843098,4\na1259960400,26.29,1968236,5\n1,26.82,1464981,5\n2,27.15,2815208,5\na1261717200,28.33,2845701,4\n1,26.54,3145816,5\na1262984400,26.5,2111345,5\n1,26.35,1420193,5\n2,26.12,1432381,4\n3,26.69,1688175,5\n4,26.68,1828893,5\n5,25.36,4101053,5\n6,24.8,4608119,4\n7,25.32,2537806,5\n8,27.41,2508939,5\n9,26.35,3839776,5\nTIMEZONE_OFFSET=-240\na1269028800,27.8,4235348,5\n1,27.7,6177188,5\na1270180800,26.12,3465463,5\na1270843200,26.26,2061968,5\n1,26.13,2177089,5\n2,27,1696766,5\n3,27.51,3505537,5\n4,26.53,4337766,5\n5,25.55,8111991,5\n6,25.46,6283626,5\n7,26.26,4948535,5\n8,26.5,3901551,4\n9,27.67,2766892,5\n10,28.3,4826344,5\n11,28.97,8661495,5\n12,25.7,5580256,5\n13,27.44,2722830,4\n14,26.97,3553936,5\n15,27.82,2816866,5\n16,27.52,3829205,5\n17,28.08,2471693,5\n18,27.36,3250602,5\n19,26.98,4654785,5\n20,27.35,3671233,5\n21,28.37,4034578,5\n22,28.17,3601129,4\n23,29.62,6625721,5\n24,28.19,10288826,5\n25,26.98,23920263,5\n26,27.46,5468182,5\n27,27.61,5813520,5\n28,27.9,4906406,5\n29,28.64,9954584,5\n30,29.43,5912307,5\nTIMEZONE_OFFSET=-300\na1289595600,28.37,8044072,5\n1,28.61,7260495,5\n2,29.3,4786367,4\n3,29.47,6280600,5\n4,29.31,18366083,5\n5,29.32,9051118,5\na1293138000,29.86,8990655,5\na1293829200,28.74,12983273,5\n1,29.47,9492941,5\n2,29,42321295,5\n3,28.45,12621078,4\n4,28.69,11984158,5\n5,28.87,16459335,5\n6,29.55,11204849,5\n7,29.27,12464002,5\n8,29.4,8250461,4\n9,29.64,10828025,5\n10,30.02,15665686,5\nTIMEZONE_OFFSET=-240\na1300478400,30.67,22759172,5\n1,29.02,62926836,5\n2,29.02,22491718,5\n3,28.31,15789881,5\n4,28.53,14336596,5\na1303416000,28.78,7441755,5\na1304107200,29.11,13228248,5\n1,29.46,11474502,5\n2,29.62,9296500,5\n3,29.97,9228358,5\n4,30.28,9470602,5\n5,30.34,9229009,4\n6,30.1,23236812,5\n7,30.15,21310473,5\n8,28.73,88579028,5\n9,29.6,25536612,5\n10,30.195,21803953,4\n11,29.27,21892113,5\n12,29.68,18690890,5\n13,27.92,53270900,5\n14,28.35,43726644,5\n15,29.11,57441556,5\n16,28.61,29587407,5\n17,28.06,34696844,5\n18,27.27,40359082,5\n19,28.39,22423091,4\n20,29.54,31467459,5\n21,27.54,43579687,5\n22,27.1,22101356,5\n23,26.69,40951079,5\n24,27.65,15894972,5\n25,27.7,17958458,5\n26,27.71,66432413,5\n27,27.89,32259100,5\nTIMEZONE_OFFSET=-300\na1321045200,28.11,21375301,5\n1,28.06,16116757,5\n2,27.76,12771166,4\n3,28.38,19723710,5\n4,28.9,17788956,5\n5,29.08,33567368,5\n6,28.01,32835514,5\n7,28.08,10368306,4\n8,28.329,13164258,4\n9,28.35,19328585,5\n10,29,15151602,4\n11,29.09,21161845,5\n12,29.7,19902051,5\n13,30.195,33581547,5\n14,30.37,35651234,5\n15,30.66,18062549,4\n16,31.17,32031625,5\n17,29.5,98930845,5\nTIMEZONE_OFFSET=-240\na1331928000,29.34,36010949,5\n1,29.29,19635394,5\n2,29.54,25409614,5\na1333656000,30.07,19475739,5\na1334347200,30.11,20404174,5\n1,30.62,20115636,5\n2,31.01,17615011,5\n3,31.66,23404807,5\n4,32.33,21885797,5\n5,31.03,31705318,5\n6,32.22,27278434,5\n7,32.3,41846565,4\n8,32.73,25993186,5\n9,33.6,36503844,5\n10,32.53,47948099,5\n11,33.61,25463295,5\n12,34.26,19287105,4\n13,34.67,34121556,5\n14,34.33,84672637,5\n15,35.375,40836384,5\n16,34.83,33531592,5\n17,33.89,60531834,5\n18,33.78,35803914,5\n19,34.17,17120548,5\n20,34.84,19331409,5\n21,35.02,15036457,4\n22,36.49,32552893,5\n23,35.165,53195127,5\n24,34.6,29849029,5\n25,34.9,21871431,5\n26,32.59,50436641,5\n27,33.04,75072907,5\n28,32,25543441,5\n29,32.45,17473980,3\nTIMEZONE_OFFSET=-300\na1352494800,30.82,35992688,5\n1,30.99,78235498,5\n2,31.66,19086545,4\n3,31.55,21376198,5\n4,31.105,17705787,5\n5,30.2,26215494,5\n6,31.15,37464759,5\n7,29,22803026,4\n8,31.05,23929658,4\n9,31.03,15237226,5\n10,31.48,12925257,5\n11,31.33,14545681,4\n12,31.62,16642979,5\n13,32.13,21429468,5\n14,32.51,20615725,5\n15,32.18,18538647,4\n16,31.74,70626315,5\n17,32.47,36534369,5\nTIMEZONE_OFFSET=-240\na1363377600,33.121,52136777,5\n1,32.36,33344793,5\na1364500800,32.78,25253157,5\na1365192000,32.79,23218541,5\n1,32.65,19657459,5\n2,31.8,26474974,5\n3,32.79,18911902,5\n4,30.66,45993138,5\n5,30.04,32007004,5\n6,29.65,61415872,5\n7,27.72,49557235,5\n8,25.8,78143300,4\n9,25.56,50832862,5\n10,25.52,64745937,5\n11,23.45,73839417,5\n12,23.01,58804929,5\n13,20.76,40986900,4\n14,21.9,46950502,5\n15,22.05,29450408,5\n16,21.64,28949195,5\n17,22.59,53504851,5\n18,23.11,25423599,5\n19,21.82,23966827,5\n20,22.82,46589341,5\n21,22.76,28072258,5\n22,22.74,22211188,4\n23,23.74,26939768,5\n24,23.19,48180715,5\n25,22.88,40048401,5\n26,23.05,26770975,5\n27,22.48,31482846,5\n28,23.5,27668904,5\n29,24.05,21684409,5\n30,21.955,62782178,5\nTIMEZONE_OFFSET=-300\na1383944400,21.05,36345923,5\n1,21.42,37319438,5\n2,20.36,26954549,5\n3,20.38,40382876,4\n4,19.28,39563993,5\n5,20.02,34028039,5\n6,19.87,37351892,5\n7,19.21,23140494,4\n8,19.59,23437946,4\n9,20.14,23680962,5\n10,20.25,20363409,5\n11,20.81,19949036,4\n12,20.95,23812133,5\n13,21.98,49045490,5\n14,22.04,23015395,5\n15,22.02,20318677,4\n16,22.29,23756602,5\n17,22.005,21815293,5\nTIMEZONE_OFFSET=-240\na1394827200,22.56,19514631,5\n1,22.48,37126860,5\n2,21.25,21607244,5\n3,21.81,22390474,5\n4,22.39,22450809,5\n"}};
+google.finance.data.numberFormat = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'}, {'threshold':1000000000000,'symbol':'T'}] ;
+_setStickyUrlParams("ei=_GVJU9ijMMvuqgHscQ");
+if (_s_Store) {
+_s_Store._allowMatchAdvancedSearch = true;
+var _fieldToDisplayNameMap = {GrossMargin:"Gross margin&nbsp;(%)",Return1Week:"1w return",Return156Week:"156w return",NextYearEPS:"Next year EPS",LTDebtToAssetsYear:"LT debt/assets (Recent&nbsp;yr)&nbsp;(%)",RevenueGrowthRate5Years:"5y revenue growth rate",EarningsAfterTaxes:"Earnings after taxes",DividendPerShare:"Div per share",MarketCap:"Market cap",NetProfitMarginPercent:"Net profit margin&nbsp;(%)",Float:"Float",EarningsBeforeTaxes:"Earnings before taxes",QuotePercChange:"Quote change&nbsp;(%)",TotalDebtToEquityYear:"Total debt/equity (Recent&nbsp;yr)&nbsp;(%)",TotalDebtToCapitalQuarter:"Total debt/capital (Recent&nbsp;qtr)&nbsp;(%)",LTDebtToCapitalQuarter:"LT debt/capital (Recent&nbsp;qtr)&nbsp;(%)",EPSGrowthRate10Years:"10y EPS growth rate",Beta:"Beta",ReturnOnAssetsPTM:"Return on assets (PTM)&nbsp;(%)",CapitalGain:"Capital gain",BetaDown:"Beta down from RAS",IncomeDividend:"Income dividend",RevenueGrowthRate10Years:"10y revenue growth rate",MarketCapShareBasis:"Market cap share basis",IAD:"Div rate indicated annual",Return4Week:"4w return",Price150DayAverage:"150d avg price",EPSGrowthRate5Years:"5y EPS growth rate",ReturnOnAssetsTTM:"Return on assets (TTM)&nbsp;(%)",TotalDebtToAssetsYear:"Total debt/assets (Recent&nbsp;yr)&nbsp;(%)",Volume:"Volume",DividendRecentQuarter:"Div recent quarter",CurrentRatioYear:"Current ratio",Low52Week:"52w low",ExpenseRatio:"Expense ratio",Price13WeekPercChange:"13w&nbsp;price change&nbsp;(%)",Price1DayPercChange:"1d&nbsp;price change&nbsp;(%)",ReturnOnEquity5Years:"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)",TotalDebtToCapitalYear:"Total debt/capital (Recent&nbsp;yr)&nbsp;(%)",TotalDebtToAssetsQuarter:"Total debt/assets (Recent&nbsp;qtr)&nbsp;(%)",NavChange:"Nav change",OperatingMargin:"Operating margin&nbsp;(%)",DPSRecentYear:"Div per share (Recent&nbsp;yr)",ANI:"Earnings after taxes (Recent&nbsp;yr)",AverageVolume:"Average volume",High52Week:"52w high",Return13Week:"13w return",PriceToCashFlowPerShare:"Price to cash flow per share",ATAXRATE:"Tax rate (Recent&nbsp;yr)",Price26WeekPercChange:"26w&nbsp;price change&nbsp;(%)",QuoteChange:"Quote change",NetIncomeChangePerc:"Net income change&nbsp;(%)",ReturnOnInvestment5Years:"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)",PE:"P/E ratio",ReturnOnInvestmentYear:"Return on investment (Recent&nbsp;yr)&nbsp;(%)",Price200DayAverage:"200d avg price",DividendNextQuarter:"Div next quarter",EBITD:"EBITDA",PriceYTDPercChange:"YTD&nbsp;price change&nbsp;(%)",ReturnOnInvestmentTTM:"Return on investment (TTM)&nbsp;(%)",NavChangePercent:"Nav change&nbsp;(%)",EBITDMargin:"EBITDA margin&nbsp;(%)",LTDebtToEquityQuarter:"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)",BetaRAS:"Beta from RAS",PriceSales:"Price to sales",NetAssets:"Net assets",ReturnOnEquityTTM:"Return on equity (TTM)&nbsp;(%)",CashPerShareYear:"Cash/share",ReturnOnAssets5Years:"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)",ReturnDay:"1d return",Return52Week:"52w return",ForwardPE1Year:"1y fwd P/E",NetIncomeGrowthRate5Years:"5y net income growth rate",DividendYield:"Div yield&nbsp;(%)",Dividend:"Div from cash flow",BetaUp:"Beta up from RAS",LTDebtToCapitalYear:"LT debt/capital (Recent&nbsp;yr)&nbsp;(%)",nprice:"Price from RAS",Return260Week:"260w return",ReturnOnEquityQuarter:"Return on equity (Recent&nbsp;qtr)&nbsp;(%)",ACOGS:"Cost of goods sold",LTDebtToAssetsQuarter:"LT debt/assets (Recent&nbsp;qtr)&nbsp;(%)",PriceToBook:"Price to book",LTDebtToEquityYear:"LT debt/equity (Recent&nbsp;yr)&nbsp;(%)",ReturnYTD:"Return YTD",ReturnOnEquityYear:"Return on equity (Recent&nbsp;yr)&nbsp;(%)",ReturnOnAssetsQuarter:"Return on assets (Recent&nbsp;qtr)&nbsp;(%)",TotalDebtToEquityQuarter:"Total debt/equity (Recent&nbsp;qtr)&nbsp;(%)",NavPrior:"Nav prior",AINTCOV:"Interest coverage",EPS:"EPS",ReturnOnInvestmentQuarter:"Return on investment (Recent&nbsp;qtr)&nbsp;(%)",QuoteLast:"Last price",Price50DayAverage:"50d avg price",Price4WeekPercChange:"4w&nbsp;price change&nbsp;(%)",ReturnOnAssetsYear:"Return on assets (Recent&nbsp;yr)&nbsp;(%)",MarketCapRAS:"Mkt cap from RAS",Price52WeekPercChange:"52w&nbsp;price change&nbsp;(%)",ShortInterestRatioPercent:"Short interest ratio&nbsp;(%)",InstitutionalPercentHeld:"Institutional percent held",BookValuePerShareYear:"Book value/share",ReturnOnEquityPTM:"Return on equity (PTM)&nbsp;(%)"};
+_s_Store._asStore._addStrings(_fieldToDisplayNameMap);
+}
+if (_s_Store) {
+_s_Store._allowMultipleInBox = true;
+}
+_regOnLoad(initComparisonPage);
+google.finance.renderRecentQuotes();
+</script>
+</div></div><script>var googlefinance = {i: ["f.b.id","",null,0,"",0,null,["f.b.cf","RjB_MBcLYxg.en_US.",0],[],0,[],"_GVJU9ijMMvuqgHscQ","www.google.com","7FHnpp6Y7XddCIdGdmYDHptfWPo:1397319164908",1]}; GF_domReady = 1;</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html5>
+<html>
+<head>
+  <title>My Money</title>
+  
+  <!-- Meta -->
+  <meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8"/>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  
+  <!-- Style -->
+
+
+  <link type="text/css" rel="stylesheet" media="screen, projection" href="/money/res/css/blueprint/screen.css"/>
+  <link type="text/css" rel="stylesheet" media="print" href="/money/res/css/blueprint/print.css"/> 
+  <link type="text/css" rel="stylesheet" media="all" href="/money/res/css/main.css"/>
+  <!--[if lt IE 8]><link rel="stylesheet" href="/money/res/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <!--[if lte IE 6]><style type="text/css" media="all">@import "/money/res/css/ie6.css";</style><![endif]-->
+  <!--[if IE 7]><style type="text/css" media="all">@import "/money/res/css/ie7.css";</style><![endif]-->
+  
+  
+  <!-- Scripts -->
+  <script type="text/javascript" src="/money/res/dwr/engine.js"></script>
+  <script type="text/javascript" src="/money/res/dwr/util.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/money/res/main.js"></script>
+  <script type="text/javascript" src="/money/dwr/interface/MoneyDwr.js"></script>
+</head>
+
+<body>
+  <button id="daBtn-asdf:asdf" onclick="btnClick()">Click me <img src="res/img/throbber.gif" class="hide"/></button>
+  
+  <script type="text/javascript">
+  function btnClick() {
+	  btnDisable("daBtn-asdf:asdf");
+	  setTimeout(function() { btnEnable("daBtn-asdf:asdf"); }, 3000);
+  }
+//   $("#daBtn").children("img").hide();
+</script>
+</body>
+
+</html>

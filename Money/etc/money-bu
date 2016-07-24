@@ -1,0 +1,2 @@
+TS=$(date +"%F")
+mysqldump money > /nasshare/brooks/backup/money.$TS.db
