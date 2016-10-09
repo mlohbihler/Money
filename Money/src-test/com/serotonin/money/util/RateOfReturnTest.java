@@ -23,7 +23,7 @@ public class RateOfReturnTest {
     private static void calculateReturn(AccountValue accountValue) {
         final double ror = RateOfReturn.calculate(calculateInterest(accountValue.value, accountValue.investments),
                 accountValue.investments);
-        System.out.println(accountValue.name + ": " + ror);
+        System.out.println(accountValue.name + " @ " + SDF.format(accountValue.date.getTime()) + ": " + ror);
     }
 
     private static double calculateInterest(double totalValue, Investment... investments) {
