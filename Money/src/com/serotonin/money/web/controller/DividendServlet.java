@@ -32,10 +32,10 @@ public class DividendServlet extends AbstractController {
             throws IOException, ServletException {
         if (isPost(request)) {
             if (request.getParameter("generate") != null) {
-                // Cutoff date
+                // Cutoff date, 3 months from now.
                 GregorianCalendar gc = new GregorianCalendar();
                 final int lastYear = gc.get(Calendar.YEAR) - 1;
-                gc.add(Calendar.YEAR, 1);
+                gc.add(Calendar.MONTH, 3);
                 final Date cutoff = new Date(gc.getTimeInMillis());
 
                 // Accounts

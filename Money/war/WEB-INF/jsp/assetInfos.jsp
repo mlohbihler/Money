@@ -29,12 +29,18 @@
         <td>$${asset.divAmount}</td>
         <td>
           <c:choose>
-            <c:when test="${asset.divPerYear == 12}">Monthly</c:when>
-            <c:when test="${asset.divPerYear == 4}">Quarterly</c:when>
-            <c:when test="${asset.divPerYear == 1}">Annually</c:when>
-            <c:otherwise>asset.divPerYear</c:otherwise>
+            <c:when test="${asset.divPerYear == 0}">None</c:when>
+            <c:otherwise>
+              <c:choose>
+                <c:when test="${asset.divPerYear == 12}">Monthly</c:when>
+                <c:when test="${asset.divPerYear == 4}">Quarterly</c:when>
+                <c:when test="${asset.divPerYear == 2}">Semi-annually</c:when>
+                <c:when test="${asset.divPerYear == 1}">Annually</c:when>
+                <c:otherwise>asset.divPerYear</c:otherwise>
+              </c:choose>
+              ${asset.divMonth}/${asset.divDay}
+            </c:otherwise>
           </c:choose>
-          ${asset.divMonth}/${asset.divDay}
         </td>
         <td class="nowrap">
           <tag:btn id="marketPriceBtn-${asset.symbol}" onclick="updatePrice('${asset.symbol}')" value="update"/>
