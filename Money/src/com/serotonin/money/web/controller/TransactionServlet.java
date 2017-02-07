@@ -44,19 +44,19 @@ public class TransactionServlet extends AbstractController {
     private static final long serialVersionUID = 1L;
 
     @Override
-    public ControllerResult handle(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model)
-            throws IOException, ServletException {
+    public ControllerResult handle(final HttpServletRequest request, final HttpServletResponse response,
+            final Map<String, Object> model) throws IOException, ServletException {
         model.put("accounts", BaseDao.accountDao.get());
         model.put("symbols", BaseDao.assetDao.getSymbols());
 
-        List<StringStringPair> xaTypes = new ArrayList<StringStringPair>();
-        for (TransactionType type : TransactionType.values())
+        final List<StringStringPair> xaTypes = new ArrayList<>();
+        for (final TransactionType type : TransactionType.values())
             xaTypes.add(new StringStringPair(type.name(), type.prettyName));
         model.put("xaTypes", xaTypes);
 
         if (isGet(request)) {
             if (request.getParameter("editId") != null) {
-                Transaction tx = BaseDao.transactionDao.getById(Integer.parseInt(request.getParameter("editId")));
+                final Transaction tx = BaseDao.transactionDao.getById(Integer.parseInt(request.getParameter("editId")));
                 if (tx != null) {
                     model.put("id", tx.getId());
                     model.put("accountId", tx.getAccountId());
@@ -69,86 +69,70 @@ public class TransactionServlet extends AbstractController {
                         model.put("BUYPrice", tx.getPrice());
                         model.put("BUYFx", tx.getForeignExchange());
                         model.put("BUYFee", tx.getFee());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.CASHADJ)
+                    } else if (tx.getTransactionType() == TransactionType.CASHADJ)
                         model.put("CASHADJAmount", tx.getPrice());
                     else if (tx.getTransactionType() == TransactionType.CASHDIV) {
                         model.put("CASHDIVSymbol", tx.getSymbol());
                         model.put("CASHDIVAmount", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.CONTRIBUTION)
+                    } else if (tx.getTransactionType() == TransactionType.CONTRIBUTION)
                         model.put("CONTRIBUTIONAmount", tx.getPrice());
                     else if (tx.getTransactionType() == TransactionType.DEPOSIT) {
                         model.put("DEPOSITBene", tx.getSymbol2());
                         model.put("DEPOSITAmount", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.EXCHADJ) {
+                    } else if (tx.getTransactionType() == TransactionType.EXCHADJ) {
                         model.put("EXCHADJSymbol", tx.getSymbol());
                         model.put("EXCHADJShares", tx.getShares());
                         model.put("EXCHADJPrice", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.FEE_REBATE) {
+                    } else if (tx.getTransactionType() == TransactionType.FEE_REBATE) {
                         model.put("FEE_REBATESymbol", tx.getSymbol());
                         model.put("FEE_REBATEAmount", tx.getFee());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.GRANT) {
+                    } else if (tx.getTransactionType() == TransactionType.GRANT) {
                         model.put("GRANTBene", tx.getSymbol());
                         model.put("GRANTAmount", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.INTEREST)
+                    } else if (tx.getTransactionType() == TransactionType.INTEREST)
                         model.put("INTERESTAmount", tx.getPrice());
                     else if (tx.getTransactionType() == TransactionType.MANAGEMENT_FEE) {
                         model.put("MANAGEMENT_FEESymbol", tx.getSymbol());
                         model.put("MANAGEMENT_FEEShares", tx.getShares());
                         model.put("MANAGEMENT_FEEPrice", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.MERGER) {
+                    } else if (tx.getTransactionType() == TransactionType.MERGER) {
                         model.put("MERGERFromSymbol", tx.getSymbol());
                         model.put("MERGERFromShares", tx.getShares());
                         model.put("MERGERToSymbol", tx.getSymbol2());
                         model.put("MERGERToShares", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.REINVDIV) {
+                    } else if (tx.getTransactionType() == TransactionType.REINVDIV) {
                         model.put("REINVDIVSymbol", tx.getSymbol());
                         model.put("REINVDIVShares", tx.getShares());
                         model.put("REINVDIVPrice", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.SELL) {
+                    } else if (tx.getTransactionType() == TransactionType.SELL) {
                         model.put("SELLSymbol", tx.getSymbol());
                         model.put("SELLShares", tx.getShares());
                         model.put("SELLPrice", tx.getPrice());
                         model.put("SELLFx", tx.getForeignExchange());
                         model.put("SELLFee", tx.getFee());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.SPLIT) {
+                    } else if (tx.getTransactionType() == TransactionType.SPLIT) {
                         model.put("SPLITSymbol", tx.getSymbol());
                         model.put("SPLITShares", tx.getShares());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.SPLIT_CASH) {
+                    } else if (tx.getTransactionType() == TransactionType.SPLIT_CASH) {
                         model.put("SPLIT_CASHSymbol", tx.getSymbol());
                         model.put("SPLIT_CASHAmount", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.STOCKDIV) {
+                    } else if (tx.getTransactionType() == TransactionType.STOCKDIV) {
                         model.put("STOCKDIVSymbol", tx.getSymbol());
                         model.put("STOCKDIVAmount", tx.getPrice());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.TAX) {
+                    } else if (tx.getTransactionType() == TransactionType.TAX) {
                         model.put("TAXSymbol", tx.getSymbol());
                         model.put("TAXAmount", tx.getFee());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.TRANSFER_IN) {
+                    } else if (tx.getTransactionType() == TransactionType.TRANSFER_IN) {
                         model.put("TRANSFER_INInKind", tx.getSymbol() != null);
                         model.put("TRANSFER_INAmount", tx.getPrice());
                         model.put("TRANSFER_INSymbol", tx.getSymbol());
                         model.put("TRANSFER_INShares", tx.getShares());
                         model.put("TRANSFER_INPrice", tx.getPrice());
                         model.put("TRANSFER_INBook", tx.getBookValue());
-                    }
-                    else if (tx.getTransactionType() == TransactionType.WITHDRAWAL)
+                    } else if (tx.getTransactionType() == TransactionType.WITHDRAWAL)
                         model.put("WITHDRAWALAmount", tx.getPrice());
                 }
-            }
-            else {
+            } else {
                 // The url to which to return upon successful save of the transaction
                 addParameterToModel(request, "ret", model);
                 addParameterToModel(request, "delDiv", model);
@@ -156,7 +140,7 @@ public class TransactionServlet extends AbstractController {
                 addParameterToModel(request, "accountId", model);
                 addParameterToModel(request, "xaDate", model, Utils.XA_DATE_FORMAT.format(new Date()));
 
-                TransactionType xaType = TransactionType.forString(request.getParameter("xaType"));
+                final TransactionType xaType = TransactionType.forString(request.getParameter("xaType"));
                 if (xaType != null) {
                     model.put("xaType", xaType);
 
@@ -173,73 +157,71 @@ public class TransactionServlet extends AbstractController {
                     addParameterToModel(request, xaType.name() + "Book", model);
                 }
             }
-        }
-        else if (isPost(request)) {
-            String ret = getAndPutParameter(request, "ret", model);
-            String delDiv = getAndPutParameter(request, "delDiv", model);
+        } else if (isPost(request)) {
+            final String ret = getAndPutParameter(request, "ret", model);
+            final String delDiv = getAndPutParameter(request, "delDiv", model);
 
-            int id = getAndPutIntParameter(request, "id", -1, model);
-            int accountId = getAndPutIntParameter(request, "accountId", 0, model);
-            String dateStr = getAndPutParameter(request, "xaDate", model);
-            TransactionType type = TransactionType.valueOf(getAndPutParameter(request, "xaType", model));
+            final int id = getAndPutIntParameter(request, "id", -1, model);
+            final int accountId = getAndPutIntParameter(request, "accountId", 0, model);
+            final String dateStr = getAndPutParameter(request, "xaDate", model);
+            final TransactionType type = TransactionType.valueOf(getAndPutParameter(request, "xaType", model));
 
             Date date = null;
             try {
                 date = Utils.XA_DATE_FORMAT.parse(dateStr);
-            }
-            catch (ParseException e) {
+            } catch (final ParseException e) {
                 model.put("dateError", e.getMessage());
             }
 
-            String buySymbol = getAndPutParameter(request, "BUYSymbol", model);
-            double buyShares = getAndPutDoubleParameter(request, "BUYShares", 0, model);
-            double buyPrice = getAndPutDoubleParameter(request, "BUYPrice", 0, model);
-            double buyFx = getAndPutDoubleParameter(request, "BUYFx", 0, model);
-            double buyFee = getAndPutDoubleParameter(request, "BUYFee", 0, model);
-            double cashadjAmount = getAndPutDoubleParameter(request, "CASHADJAmount", 0, model);
-            String cashdivSymbol = getAndPutParameter(request, "CASHDIVSymbol", model);
-            double cashdivAmount = getAndPutDoubleParameter(request, "CASHDIVAmount", 0, model);
-            double contributionAmount = getAndPutDoubleParameter(request, "CONTRIBUTIONAmount", 0, model);
-            String depositBene = getAndPutParameter(request, "DEPOSITBene", model);
-            double depositAmount = getAndPutDoubleParameter(request, "DEPOSITAmount", 0, model);
-            String exchadjSymbol = getAndPutParameter(request, "EXCHADJSymbol", model);
-            int exchadjShares = getAndPutIntParameter(request, "EXCHADJShares", 0, model);
-            double exchadjPrice = getAndPutDoubleParameter(request, "EXCHADJPrice", 0, model);
-            String feerebateSymbol = getAndPutParameter(request, "FEE_REBATESymbol", model);
-            double feerebateAmount = getAndPutDoubleParameter(request, "FEE_REBATEAmount", 0, model);
-            String grantBene = getAndPutParameter(request, "GRANTBene", model);
-            double grantAmount = getAndPutDoubleParameter(request, "GRANTAmount", 0, model);
-            double interestAmount = getAndPutDoubleParameter(request, "INTERESTAmount", 0, model);
-            String mgfeeSymbol = getAndPutParameter(request, "MANAGEMENT_FEESymbol", model);
-            double mgfeeShares = getAndPutDoubleParameter(request, "MANAGEMENT_FEEShares", 0, model);
-            double mgfeePrice = getAndPutDoubleParameter(request, "MANAGEMENT_FEEPrice", 0, model);
-            String mergerFromSymbol = getAndPutParameter(request, "MERGERFromSymbol", model);
-            double mergerFromShares = getAndPutDoubleParameter(request, "MERGERFromShares", 0, model);
-            String mergerToSymbol = getAndPutParameter(request, "MERGERToSymbol", model);
-            double mergerToShares = getAndPutDoubleParameter(request, "MERGERToShares", 0, model);
-            String reinvdivSymbol = getAndPutParameter(request, "REINVDIVSymbol", model);
-            double reinvdivShares = getAndPutDoubleParameter(request, "REINVDIVShares", 0, model);
-            double reinvdivPrice = getAndPutDoubleParameter(request, "REINVDIVPrice", 0, model);
-            String sellSymbol = getAndPutParameter(request, "SELLSymbol", model);
-            double sellShares = getAndPutDoubleParameter(request, "SELLShares", 0, model);
-            double sellPrice = getAndPutDoubleParameter(request, "SELLPrice", 0, model);
-            double sellFx = getAndPutDoubleParameter(request, "SELLFx", 0, model);
-            double sellFee = getAndPutDoubleParameter(request, "SELLFee", 0, model);
-            String splitSymbol = getAndPutParameter(request, "SPLITSymbol", model);
-            double splitShares = getAndPutDoubleParameter(request, "SPLITShares", 0, model);
-            String splitcashSymbol = getAndPutParameter(request, "SPLIT_CASHSymbol", model);
-            double splitcashAmount = getAndPutDoubleParameter(request, "SPLIT_CASHAmount", 0, model);
-            String stockdivSymbol = getAndPutParameter(request, "STOCKDIVSymbol", model);
-            double stockdivAmount = getAndPutDoubleParameter(request, "STOCKDIVAmount", 0, model);
-            String taxSymbol = getAndPutParameter(request, "TAXSymbol", model);
-            double taxAmount = getAndPutDoubleParameter(request, "TAXAmount", 0, model);
-            boolean transferinInKind = getAndPutBooleanParameter(request, "TRANSFER_INInKind", model);
-            double transferinAmount = getAndPutDoubleParameter(request, "TRANSFER_INAmount", 0, model);
-            String transferinSymbol = getAndPutParameter(request, "TRANSFER_INSymbol", model);
-            double transferinShares = getAndPutDoubleParameter(request, "TRANSFER_INShares", 0, model);
-            double transferinPrice = getAndPutDoubleParameter(request, "TRANSFER_INPrice", 0, model);
-            double transferinBook = getAndPutDoubleParameter(request, "TRANSFER_INBook", 0, model);
-            double withdrawalAmount = getAndPutDoubleParameter(request, "WITHDRAWALAmount", 0, model);
+            final String buySymbol = getAndPutParameter(request, "BUYSymbol", model);
+            final double buyShares = getAndPutDoubleParameter(request, "BUYShares", 0, model);
+            final double buyPrice = getAndPutDoubleParameter(request, "BUYPrice", 0, model);
+            final double buyFx = getAndPutDoubleParameter(request, "BUYFx", 0, model);
+            final double buyFee = getAndPutDoubleParameter(request, "BUYFee", 0, model);
+            final double cashadjAmount = getAndPutDoubleParameter(request, "CASHADJAmount", 0, model);
+            final String cashdivSymbol = getAndPutParameter(request, "CASHDIVSymbol", model);
+            final double cashdivAmount = getAndPutDoubleParameter(request, "CASHDIVAmount", 0, model);
+            final double contributionAmount = getAndPutDoubleParameter(request, "CONTRIBUTIONAmount", 0, model);
+            final String depositBene = getAndPutParameter(request, "DEPOSITBene", model);
+            final double depositAmount = getAndPutDoubleParameter(request, "DEPOSITAmount", 0, model);
+            final String exchadjSymbol = getAndPutParameter(request, "EXCHADJSymbol", model);
+            final int exchadjShares = getAndPutIntParameter(request, "EXCHADJShares", 0, model);
+            final double exchadjPrice = getAndPutDoubleParameter(request, "EXCHADJPrice", 0, model);
+            final String feerebateSymbol = getAndPutParameter(request, "FEE_REBATESymbol", model);
+            final double feerebateAmount = getAndPutDoubleParameter(request, "FEE_REBATEAmount", 0, model);
+            final String grantBene = getAndPutParameter(request, "GRANTBene", model);
+            final double grantAmount = getAndPutDoubleParameter(request, "GRANTAmount", 0, model);
+            final double interestAmount = getAndPutDoubleParameter(request, "INTERESTAmount", 0, model);
+            final String mgfeeSymbol = getAndPutParameter(request, "MANAGEMENT_FEESymbol", model);
+            final double mgfeeShares = getAndPutDoubleParameter(request, "MANAGEMENT_FEEShares", 0, model);
+            final double mgfeePrice = getAndPutDoubleParameter(request, "MANAGEMENT_FEEPrice", 0, model);
+            final String mergerFromSymbol = getAndPutParameter(request, "MERGERFromSymbol", model);
+            final double mergerFromShares = getAndPutDoubleParameter(request, "MERGERFromShares", 0, model);
+            final String mergerToSymbol = getAndPutParameter(request, "MERGERToSymbol", model);
+            final double mergerToShares = getAndPutDoubleParameter(request, "MERGERToShares", 0, model);
+            final String reinvdivSymbol = getAndPutParameter(request, "REINVDIVSymbol", model);
+            final double reinvdivShares = getAndPutDoubleParameter(request, "REINVDIVShares", 0, model);
+            final double reinvdivPrice = getAndPutDoubleParameter(request, "REINVDIVPrice", 0, model);
+            final String sellSymbol = getAndPutParameter(request, "SELLSymbol", model);
+            final double sellShares = getAndPutDoubleParameter(request, "SELLShares", 0, model);
+            final double sellPrice = getAndPutDoubleParameter(request, "SELLPrice", 0, model);
+            final double sellFx = getAndPutDoubleParameter(request, "SELLFx", 0, model);
+            final double sellFee = getAndPutDoubleParameter(request, "SELLFee", 0, model);
+            final String splitSymbol = getAndPutParameter(request, "SPLITSymbol", model);
+            final double splitShares = getAndPutDoubleParameter(request, "SPLITShares", 0, model);
+            final String splitcashSymbol = getAndPutParameter(request, "SPLIT_CASHSymbol", model);
+            final double splitcashAmount = getAndPutDoubleParameter(request, "SPLIT_CASHAmount", 0, model);
+            final String stockdivSymbol = getAndPutParameter(request, "STOCKDIVSymbol", model);
+            final double stockdivAmount = getAndPutDoubleParameter(request, "STOCKDIVAmount", 0, model);
+            final String taxSymbol = getAndPutParameter(request, "TAXSymbol", model);
+            final double taxAmount = getAndPutDoubleParameter(request, "TAXAmount", 0, model);
+            final boolean transferinInKind = getAndPutBooleanParameter(request, "TRANSFER_INInKind", model);
+            final double transferinAmount = getAndPutDoubleParameter(request, "TRANSFER_INAmount", 0, model);
+            final String transferinSymbol = getAndPutParameter(request, "TRANSFER_INSymbol", model);
+            final double transferinShares = getAndPutDoubleParameter(request, "TRANSFER_INShares", 0, model);
+            final double transferinPrice = getAndPutDoubleParameter(request, "TRANSFER_INPrice", 0, model);
+            final double transferinBook = getAndPutDoubleParameter(request, "TRANSFER_INBook", 0, model);
+            final double withdrawalAmount = getAndPutDoubleParameter(request, "WITHDRAWALAmount", 0, model);
 
             try {
                 Transaction xa = null;
@@ -284,21 +266,23 @@ public class TransactionServlet extends AbstractController {
                     else
                         xa = new TransferIn(id, accountId, date, transferinSymbol, transferinShares, transferinPrice,
                                 transferinBook);
-                }
-                else if (type == TransactionType.WITHDRAWAL)
+                } else if (type == TransactionType.WITHDRAWAL)
                     xa = new Withdrawal(id, accountId, date, withdrawalAmount);
 
                 if (date != null && xa != null) {
                     boolean xaApplied = false;
-                    Account account = BaseDao.accountDao.get(accountId);
-                    for (Transaction tx : BaseDao.transactionDao.get(account.getId())) {
-                        if (xa.getTransactionDate().before(tx.getTransactionDate())) {
+                    final Account account = BaseDao.accountDao.get(accountId);
+                    for (final Transaction tx : BaseDao.transactionDao.get(account.getId())) {
+                        if (!xaApplied && xa.getTransactionDate().before(tx.getTransactionDate())) {
+                            // Time to apply this transaction.
                             xa.apply(account);
                             xa.setLastCashBalance(account.getCashBalance());
                             xaApplied = true;
                         }
-                        tx.apply(account);
-                        tx.setLastCashBalance(account.getCashBalance());
+                        if (xa.getId() != tx.getId()) {
+                            tx.apply(account);
+                            tx.setLastCashBalance(account.getCashBalance());
+                        }
                     }
 
                     if (!xaApplied) {
@@ -315,8 +299,7 @@ public class TransactionServlet extends AbstractController {
                     if (!org.apache.commons.lang3.StringUtils.isEmpty(ret))
                         return new RedirectResult(ret);
                 }
-            }
-            catch (TransactionException e) {
+            } catch (final TransactionException e) {
                 model.put("xaException", e.getMessage());
             }
         }
