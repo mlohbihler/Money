@@ -64,6 +64,29 @@
         </tr>
       </tbody>
       
+      <tbody id="div-BUYGIC" class="xaDiv hide">
+        <tr>
+          <th>Symbol</th>
+          <td><input type="text" id="BUYGICSymbol" name="BUYGICSymbol" value="${BUYGICSymbol}" class="ui-corner-all"/></td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td><input type="text" id="BUYGICDescription" name="BUYGICDescription" value="${BUYGICDescription}" class="ui-corner-all"/></td>
+        </tr>
+        <tr>
+          <th>Amount</th>
+          <td><input type="text" name="BUYGICAmount" value="${BUYGICAmount}" class="short number ui-corner-all"/></td>
+        </tr>
+        <tr>
+          <th>Rate (%)</th>
+          <td><input type="text" name="BUYGICRate" value="${BUYGICRate}" class="short number ui-corner-all"/></td>
+        </tr>
+        <tr>
+          <th>Term (years)</th>
+          <td><input type="text" name="BUYGICTerm" value="${BUYGICTerm}" class="short number ui-corner-all"/></td>
+        </tr>
+      </tbody>
+      
       <tbody id="div-CASHADJ" class="xaDiv hide">
         <tr>
           <th>Amount</th>

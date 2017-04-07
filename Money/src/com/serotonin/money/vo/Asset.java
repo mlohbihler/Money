@@ -8,13 +8,15 @@ import java.util.List;
 import com.serotonin.money.util.Investment;
 import com.serotonin.money.util.RateOfReturn;
 import com.serotonin.money.util.Utils;
+import com.serotonin.money.vo.tx.BuyGIC;
 
 public class Asset implements Comparable<Asset> {
-    private String symbol;
+    private final String symbol;
+    private final BuyGIC gicPurchase;
     private BigDecimal quantity = new BigDecimal(0);
     private BigDecimal bookValue = new BigDecimal(0);
     private BigDecimal cashReturn = new BigDecimal(0);
-    private final List<AssetInvestment> investments = new ArrayList<AssetInvestment>();
+    private final List<AssetInvestment> investments = new ArrayList<>();
     private Date lastTransactionDate;
 
     // From the Assets table.
@@ -22,23 +24,24 @@ public class Asset implements Comparable<Asset> {
 
     private boolean pastCutoff;
 
-    public Asset(String symbol) {
+    public Asset(final String symbol, final BuyGIC gicPurchase) {
         this.symbol = symbol;
+        this.gicPurchase = gicPurchase;
     }
 
     public String getSymbol() {
         return symbol;
     }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+    public BuyGIC getGicPurchase() {
+        return gicPurchase;
     }
 
     public Date getLastTransactionDate() {
         return lastTransactionDate;
     }
 
-    public void setLastTransactionDate(Date lastTransactionDate) {
+    public void setLastTransactionDate(final Date lastTransactionDate) {
         this.lastTransactionDate = lastTransactionDate;
     }
 
@@ -62,15 +65,15 @@ public class Asset implements Comparable<Asset> {
         return quantity;
     }
 
-    public void setQuantity(BigDecimal quantity) {
+    public void setQuantity(final BigDecimal quantity) {
         this.quantity = quantity;
     }
 
-    public void addQuantity(BigDecimal amount) {
+    public void addQuantity(final BigDecimal amount) {
         quantity = quantity.add(amount);
     }
 
-    public void subtractQuantity(BigDecimal amount) {
+    public void subtractQuantity(final BigDecimal amount) {
         quantity = quantity.subtract(amount);
     }
 
@@ -80,15 +83,15 @@ public class Asset implements Comparable<Asset> {
         return bookValue;
     }
 
-    public void setBookValue(BigDecimal bookValue) {
+    public void setBookValue(final BigDecimal bookValue) {
         this.bookValue = bookValue.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void addBookValue(BigDecimal amount) {
+    public void addBookValue(final BigDecimal amount) {
         bookValue = bookValue.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void subtractBookValue(BigDecimal amount) {
+    public void subtractBookValue(final BigDecimal amount) {
         bookValue = bookValue.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
@@ -98,15 +101,15 @@ public class Asset implements Comparable<Asset> {
         return cashReturn;
     }
 
-    public void setCashReturn(BigDecimal cashReturn) {
+    public void setCashReturn(final BigDecimal cashReturn) {
         this.cashReturn = cashReturn.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void addCashReturn(BigDecimal amount) {
+    public void addCashReturn(final BigDecimal amount) {
         cashReturn = cashReturn.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void subtractCashReturn(BigDecimal amount) {
+    public void subtractCashReturn(final BigDecimal amount) {
         cashReturn = cashReturn.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
@@ -116,7 +119,7 @@ public class Asset implements Comparable<Asset> {
         return investments;
     }
 
-    public void addInvestment(BigDecimal amount, Date date) {
+    public void addInvestment(final BigDecimal amount, final Date date) {
         investments.add(new AssetInvestment(amount, date));
     }
 
@@ -136,9 +139,9 @@ public class Asset implements Comparable<Asset> {
     }
 
     public double getCapitalGainLoss() {
-        double averageCost = bookValue.doubleValue() / quantity.doubleValue();
-        double gl = getMarketValue().doubleValue() / averageCost;
-        return (gl - 1);
+        final double averageCost = bookValue.doubleValue() / quantity.doubleValue();
+        final double gl = getMarketValue().doubleValue() / averageCost;
+        return gl - 1;
     }
 
     /**
@@ -152,9 +155,9 @@ public class Asset implements Comparable<Asset> {
         return getRateOfReturn(new Date());
     }
 
-    public double getRateOfReturn(Date asOfDate) {
-        List<Investment> list = new ArrayList<Investment>();
-        for (AssetInvestment i : investments)
+    public double getRateOfReturn(final Date asOfDate) {
+        final List<Investment> list = new ArrayList<>();
+        for (final AssetInvestment i : investments)
             list.add(new Investment(i.getAmount(), RateOfReturn.differenceInYears(i.getDate(), asOfDate)));
         return RateOfReturn.calculate(getReturn(), list);
     }
@@ -163,7 +166,7 @@ public class Asset implements Comparable<Asset> {
         return assetInfo;
     }
 
-    public void setAssetInfo(AssetInfo assetInfo) {
+    public void setAssetInfo(final AssetInfo assetInfo) {
         this.assetInfo = assetInfo;
     }
 
@@ -171,7 +174,7 @@ public class Asset implements Comparable<Asset> {
         return pastCutoff;
     }
 
-    public void setPastCutoff(boolean pastCutoff) {
+    public void setPastCutoff(final boolean pastCutoff) {
         this.pastCutoff = pastCutoff;
     }
 
@@ -182,7 +185,7 @@ public class Asset implements Comparable<Asset> {
     }
 
     @Override
-    public int compareTo(Asset that) {
+    public int compareTo(final Asset that) {
         return symbol.compareTo(that.symbol);
     }
 }

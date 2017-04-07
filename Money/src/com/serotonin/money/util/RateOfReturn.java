@@ -8,24 +8,24 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 public class RateOfReturn {
-    public static double calculate(double totalInterest, Investment... investments) {
-        List<Investment> list = new ArrayList<Investment>(investments.length);
-        for (Investment i : investments)
+    public static double calculate(final double totalInterest, final Investment... investments) {
+        final List<Investment> list = new ArrayList<>(investments.length);
+        for (final Investment i : investments)
             list.add(i);
         return calculate(new BigDecimal(totalInterest), list);
     }
 
-    public static double calculate(BigDecimal totalInterest, List<Investment> investments) {
-        totalInterest = totalInterest.setScale(2, BigDecimal.ROUND_HALF_UP);
+    public static double calculate(final BigDecimal totalInterest, final List<Investment> investments) {
+        final BigDecimal ti = totalInterest.setScale(2, BigDecimal.ROUND_HALF_UP);
 
         double min = Double.NaN;
         double max = Double.NaN;
 
         double test = 1;
         while (true) {
-            BigDecimal testInterest = getInterest(test, investments).setScale(2, BigDecimal.ROUND_HALF_UP);
+            final BigDecimal testInterest = getInterest(test, investments).setScale(2, BigDecimal.ROUND_HALF_UP);
 
-            int comp = totalInterest.compareTo(testInterest);
+            final int comp = ti.compareTo(testInterest);
 
             if (comp == 0)
                 return test;
@@ -36,8 +36,7 @@ public class RateOfReturn {
                     test /= 2;
                 else
                     test = (max + min) / 2;
-            }
-            else {
+            } else {
                 min = test;
                 if (Double.isNaN(max))
                     test *= 2;
@@ -51,17 +50,17 @@ public class RateOfReturn {
         }
     }
 
-    private static BigDecimal getInterest(double rate, List<Investment> investments) {
+    private static BigDecimal getInterest(final double rate, final List<Investment> investments) {
         BigDecimal total = new BigDecimal(0);
         BigDecimal invested = new BigDecimal(0);
-        for (Investment investment : investments) {
+        for (final Investment investment : investments) {
             invested = invested.add(investment.amount);
             total = total.add(investment.amount.multiply(new BigDecimal(Math.pow(rate, investment.years))));
         }
         return total.subtract(invested);
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         //        // AIM1523
         //        System.out.println(calculate(-665, new Investment(21333.78, 1.3972453027921252), new Investment(-20668.77732,
         //                1.3917658507373307)));
@@ -178,68 +177,72 @@ public class RateOfReturn {
         //        System.out.println(calculate2(new BigDecimal(50), investments));
     }
 
-    public static int differenceInDays(GregorianCalendar from, GregorianCalendar to) {
-        if (from.compareTo(to) > 0) {
-            GregorianCalendar swap = from;
-            from = to;
-            to = swap;
+    public static int differenceInDays(final GregorianCalendar from, final GregorianCalendar to) {
+        GregorianCalendar f = from;
+        GregorianCalendar t = to;
+        if (f.compareTo(t) > 0) {
+            final GregorianCalendar swap = f;
+            f = t;
+            t = swap;
         }
 
-        from = (GregorianCalendar) from.clone();
+        f = (GregorianCalendar) f.clone();
 
         int days = 0;
 
-        int year = from.get(Calendar.YEAR);
-        while (year < to.get(Calendar.YEAR)) {
-            days += daysInYear(from, year);
-            days -= from.get(Calendar.DAY_OF_YEAR) - 1;
+        int year = f.get(Calendar.YEAR);
+        while (year < t.get(Calendar.YEAR)) {
+            days += daysInYear(f, year);
+            days -= f.get(Calendar.DAY_OF_YEAR) - 1;
 
             year++;
-            from.set(year, 0, 1);
+            f.set(year, 0, 1);
         }
 
-        days += to.get(Calendar.DAY_OF_YEAR) - from.get(Calendar.DAY_OF_YEAR);
+        days += t.get(Calendar.DAY_OF_YEAR) - f.get(Calendar.DAY_OF_YEAR);
 
         return days;
     }
 
-    public static double differenceInYears(Date from, Date to) {
+    public static double differenceInYears(final Date from, final Date to) {
         return differenceInYears(toGC(from), toGC(to));
     }
 
-    private static GregorianCalendar toGC(Date d) {
-        GregorianCalendar gc = new GregorianCalendar();
+    private static GregorianCalendar toGC(final Date d) {
+        final GregorianCalendar gc = new GregorianCalendar();
         gc.setTime(d);
         return gc;
     }
 
-    public static double differenceInYears(GregorianCalendar from, GregorianCalendar to) {
-        if (from.compareTo(to) > 0) {
-            GregorianCalendar swap = from;
-            from = to;
-            to = swap;
+    public static double differenceInYears(final GregorianCalendar from, final GregorianCalendar to) {
+        GregorianCalendar f = from;
+        GregorianCalendar t = to;
+        if (f.compareTo(t) > 0) {
+            final GregorianCalendar swap = f;
+            f = t;
+            t = swap;
         }
 
-        from = (GregorianCalendar) from.clone();
+        f = (GregorianCalendar) f.clone();
 
         double years = 0;
 
-        int year = from.get(Calendar.YEAR);
-        while (year < to.get(Calendar.YEAR)) {
-            int daysInYear = daysInYear(from, year);
-            int days = daysInYear - from.get(Calendar.DAY_OF_YEAR) + 1;
-            years += ((double) days) / daysInYear;
+        int year = f.get(Calendar.YEAR);
+        while (year < t.get(Calendar.YEAR)) {
+            final int daysInYear = daysInYear(f, year);
+            final int days = daysInYear - f.get(Calendar.DAY_OF_YEAR) + 1;
+            years += (double) days / daysInYear;
 
             year++;
-            from.set(year, 0, 1);
+            f.set(year, 0, 1);
         }
 
-        years += ((double) (to.get(Calendar.DAY_OF_YEAR) - from.get(Calendar.DAY_OF_YEAR))) / daysInYear(from, year);
+        years += (double) (t.get(Calendar.DAY_OF_YEAR) - f.get(Calendar.DAY_OF_YEAR)) / daysInYear(f, year);
 
         return years;
     }
 
-    private static int daysInYear(GregorianCalendar gc, int year) {
+    private static int daysInYear(final GregorianCalendar gc, final int year) {
         if (gc.isLeapYear(year))
             return 366;
         return 365;

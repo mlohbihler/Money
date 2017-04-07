@@ -23,7 +23,7 @@ import com.serotonin.web.dwr.DwrResponse;
 public class MoneyDwr {
     private static final Log LOG = LogFactory.getLog(MoneyDwr.class);
 
-    public DwrResponse getMarketPrice(String symbol) {
+    public DwrResponse getMarketPrice(final String symbol) {
         AssetInfo assetInfo = BaseDao.assetDao.get(symbol);
         if (assetInfo == null) {
             assetInfo = new AssetInfo();
@@ -31,7 +31,7 @@ public class MoneyDwr {
             assetInfo.setName("");
         }
 
-        DwrResponse dr = new DwrResponse();
+        final DwrResponse dr = new DwrResponse();
 
         try {
             Market.populateMarketValue(assetInfo);
@@ -39,8 +39,7 @@ public class MoneyDwr {
 
             dr.addData("price", assetInfo.getMarketPrice());
             dr.addData("time", assetInfo.getPrettyMarketTime());
-        }
-        catch (Exception e) {
+        } catch (final Exception e) {
             LOG.error("", e);
             dr.addMessage("Error: " + e.getMessage());
         }
@@ -49,24 +48,23 @@ public class MoneyDwr {
     }
 
     public DwrResponse getAllMarketPrice() {
-        List<AssetInfo> assetInfos = BaseDao.assetDao.get();
+        final List<AssetInfo> assetInfos = BaseDao.assetDao.get();
 
-        DwrResponse dr = new DwrResponse();
+        final DwrResponse dr = new DwrResponse();
 
         try {
             Market.populateMarketValues(assetInfos);
-            for (AssetInfo assetInfo : assetInfos) {
+            for (final AssetInfo assetInfo : assetInfos) {
                 if (assetInfo.getMarketPrice() > 0) {
                     BaseDao.assetDao.save(assetInfo);
 
-                    Map<String, Object> map = new HashMap<String, Object>();
+                    final Map<String, Object> map = new HashMap<>();
                     map.put("price", assetInfo.getMarketPrice());
                     map.put("time", assetInfo.getPrettyMarketTime());
                     dr.addData(assetInfo.getSymbol(), map);
                 }
             }
-        }
-        catch (Exception e) {
+        } catch (final Exception e) {
             LOG.error("", e);
             dr.addMessage("Error: " + e.getMessage());
         }
@@ -74,7 +72,7 @@ public class MoneyDwr {
         return dr;
     }
 
-    public List<Transaction> getTransactions(int accountId, String symbol) {
+    public List<Transaction> getTransactions(final int accountId, final String symbol) {
         //        List<Transaction> txs;
         //        if (symbol == null)
         //            txs = BaseDao.transactionDao.get(accountId);
@@ -85,12 +83,11 @@ public class MoneyDwr {
         List<Transaction> txs = BaseDao.transactionDao.get(accountId);
 
         // Apply the transactions to the account.
-        Account account = new Account();
-        for (Transaction tx : txs) {
+        final Account account = new Account();
+        for (final Transaction tx : txs) {
             try {
                 tx.apply(account);
-            }
-            catch (TransactionException e) {
+            } catch (final TransactionException e) {
                 // Ignore
                 throw new RuntimeException(e);
             }
@@ -99,8 +96,8 @@ public class MoneyDwr {
 
         if (symbol != null) {
             // Extract just the transactions for the given symbol
-            List<Transaction> symbolTxs = new ArrayList<Transaction>();
-            for (Transaction tx : txs) {
+            final List<Transaction> symbolTxs = new ArrayList<>();
+            for (final Transaction tx : txs) {
                 if (symbol.equals(tx.getSymbol()) || symbol.equals(tx.getSymbol2()))
                     symbolTxs.add(tx);
             }
@@ -110,29 +107,27 @@ public class MoneyDwr {
         return txs;
     }
 
-    public void deleteTransaction(int id) {
+    public void deleteTransaction(final int id) {
         BaseDao.transactionDao.delete(id);
     }
 
-    public Dividend getDividend(int id) {
+    public Dividend getDividend(final int id) {
         return BaseDao.dividendDao.get(id);
     }
 
-    public String updateDividend(int id, String xaDate, String exDiv, double shares, double divAmount, double amount,
-            String xaType) {
-        Dividend d = BaseDao.dividendDao.get(id);
+    public String updateDividend(final int id, final String xaDate, final String exDiv, final double shares,
+            final double divAmount, final double amount, final String xaType) {
+        final Dividend d = BaseDao.dividendDao.get(id);
 
         try {
             d.setXaDate(Utils.XA_DATE_FORMAT.parse(xaDate));
-        }
-        catch (ParseException e) {
+        } catch (final ParseException e) {
             return e.getMessage();
         }
 
         try {
             d.setExDivDate(Utils.XA_DATE_FORMAT.parse(exDiv));
-        }
-        catch (ParseException e) {
+        } catch (final ParseException e) {
             // ignore
         }
 

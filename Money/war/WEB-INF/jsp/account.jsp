@@ -52,7 +52,7 @@
       <td></td>
     </tr>
     <c:forEach items="${account.assets}" var="asset">
-      <c:if test="${!asset.pastCutoff}">
+      <c:if test="${!asset.pastCutoff && asset.gicPurchase==null}">
         <tr>
           <td>
             ${asset.symbol}<br/>
@@ -82,6 +82,33 @@
           </td>
         </tr>
       </c:if>
+    </c:forEach>
+  </table>
+  
+  <h3>GICs</h3>
+  <table class="table">
+    <tr>
+      <th>Symbol</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Rate</th>
+      <th>Term</th>
+      <th>Market</th>
+      <th>Net</th>
+    </tr>
+    <c:forEach items="${gics}" var="gic">
+      <tr>
+        <td>
+          ${gic.symbol}<br/>
+          <span class="assetName">${gic.symbol2}</span>
+        </td>
+        <td class="number">${gic.prettyTransactionDate}</td>
+        <td class="number">$<fmt:formatNumber pattern="0.00" value="${gic.price}"/></td>
+        <td class="number"><fmt:formatNumber pattern="0.0000" value="${gic.foreignExchange}"/></td>
+        <td class="number"><fmt:formatNumber pattern="0.#" value="${gic.fee}"/></td>
+        <td class="number">$<fmt:formatNumber pattern="0.00" value="${gic.marketValue}"/></td>
+        <td class="number">$<fmt:formatNumber pattern="0.00" value="${gic.marketValue - gic.price}"/></td>
+      </tr>
     </c:forEach>
   </table>
   

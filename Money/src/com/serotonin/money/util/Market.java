@@ -24,17 +24,17 @@ public class Market {
 
     static int maxSymbols = 14;
 
-    public static void populateMarketValue(AssetInfo asset) throws Exception {
-        final List<AssetInfo> assets = new ArrayList<AssetInfo>();
+    public static void populateMarketValue(final AssetInfo asset) throws Exception {
+        final List<AssetInfo> assets = new ArrayList<>();
         assets.add(asset);
         populateMarketValues(assets);
     }
 
-    public static void populateMarketValues(List<AssetInfo> assets) throws Exception {
+    public static void populateMarketValues(final List<AssetInfo> assets) throws Exception {
         // Just do yahoo
         final List<AssetInfo> fails = populateMarketValuesYahoo(assets);
         if (!fails.isEmpty()) {
-            final List<AssetInfo> oneAtATime = new ArrayList<AssetInfo>();
+            final List<AssetInfo> oneAtATime = new ArrayList<>();
             for (final AssetInfo a : fails) {
                 oneAtATime.add(a);
                 populateMarketValuesYahoo(oneAtATime);
@@ -63,7 +63,7 @@ public class Market {
         //            populateMarketValuesYahoo(fails);
     }
 
-    static List<AssetInfo> populateMarketValuesGoogle(List<AssetInfo> assets) throws Exception {
+    static List<AssetInfo> populateMarketValuesGoogle(final List<AssetInfo> assets) throws Exception {
         final StringBuilder sb = new StringBuilder();
         sb.append("http://www.google.com/finance?q=");
         boolean first = true;
@@ -78,7 +78,7 @@ public class Market {
         final HttpClient httpClient = HttpUtils4.getHttpClient(10000);
         final String content = HttpUtils4.getTextContent(httpClient, sb.toString());
 
-        final List<AssetInfo> fails = new ArrayList<AssetInfo>();
+        final List<AssetInfo> fails = new ArrayList<>();
         for (final AssetInfo asset : assets) {
             if (!findPriceGoogle(asset, content))
                 fails.add(asset);
@@ -96,7 +96,7 @@ public class Market {
     //        return valid;
     //    }
 
-    private static boolean findPriceGoogle(AssetInfo asset, String content) {
+    private static boolean findPriceGoogle(final AssetInfo asset, final String content) {
         String market = null;
 
         final String symbolToUse = getSymbolToUse(asset);
@@ -153,12 +153,12 @@ public class Market {
         return market != null;
     }
 
-    private static List<AssetInfo> populateMarketValuesYahoo(List<AssetInfo> assets) throws Exception {
+    private static List<AssetInfo> populateMarketValuesYahoo(final List<AssetInfo> assets) throws Exception {
         final StringBuilder sb = new StringBuilder();
         sb.append("https://ca.finance.yahoo.com/quotes/");
 
-        final List<AssetInfo> attempts = new ArrayList<AssetInfo>();
-        final List<AssetInfo> fails = new ArrayList<AssetInfo>();
+        final List<AssetInfo> attempts = new ArrayList<>();
+        final List<AssetInfo> fails = new ArrayList<>();
 
         boolean first = true;
         for (final AssetInfo asset : assets) {
@@ -183,8 +183,7 @@ public class Market {
                     if (!findPriceYahoo(asset, content))
                         fails.add(asset);
                 }
-            }
-            catch (final Exception e) {
+            } catch (final Exception e) {
                 fails.addAll(attempts);
                 throw new Exception("Failed on url " + sb, e);
             }
@@ -193,7 +192,7 @@ public class Market {
         return fails;
     }
 
-    private static boolean findPriceYahoo(AssetInfo asset, String content) {
+    private static boolean findPriceYahoo(final AssetInfo asset, final String content) {
         String market = null;
 
         final String symbolToUse = getSymbolToUseYahoo(asset);
@@ -207,8 +206,7 @@ public class Market {
             double price;
             try {
                 price = Double.parseDouble(market);
-            }
-            catch (final NumberFormatException e) {
+            } catch (final NumberFormatException e) {
                 price = 0;
                 market = null;
             }
@@ -221,7 +219,7 @@ public class Market {
         return market != null;
     }
 
-    private static String getSymbolToUseYahoo(AssetInfo asset) {
+    private static String getSymbolToUseYahoo(final AssetInfo asset) {
         if (!org.apache.commons.lang3.StringUtils.isEmpty(asset.getMarketSymbol()))
             return asset.getMarketSymbol();
 
@@ -238,13 +236,13 @@ public class Market {
         return asset.getSymbol();
     }
 
-    private static String getSymbolToUse(AssetInfo asset) {
+    private static String getSymbolToUse(final AssetInfo asset) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(asset.getMarketSymbol()))
             return asset.getSymbol();
         return asset.getMarketSymbol();
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(final String[] args) throws Exception {
         final String symbolToUse = "NASDAQ:AGNC";
         String p = StringUtils.replaceMacro(pattern3a, "symbol", Utils.getSymbolSansExchange(symbolToUse));
         p = StringUtils.replaceMacro(p, "exchange", Utils.getExchange(symbolToUse));

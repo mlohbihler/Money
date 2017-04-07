@@ -2,6 +2,7 @@ package com.serotonin.money.vo.tx;
 
 public enum TransactionType {
     BUY("Buy", Buy.class, false), //
+    BUYGIC("Buy GIC", BuyGIC.class, false), //
     CASHADJ("Cash adjustment", CashAdjustment.class, false), //
     CASHDIV("Cash dividend", CashDividend.class, true), //
     CONTRIBUTION("Contribution", Contribution.class, false), //
@@ -26,7 +27,7 @@ public enum TransactionType {
     private final Class<? extends Transaction> clazz;
     public final boolean dividend;
 
-    private TransactionType(String prettyName, Class<? extends Transaction> clazz, boolean dividend) {
+    private TransactionType(final String prettyName, final Class<? extends Transaction> clazz, final boolean dividend) {
         this.prettyName = prettyName;
         this.clazz = clazz;
         this.dividend = dividend;
@@ -35,27 +36,25 @@ public enum TransactionType {
     public Transaction createTransaction() {
         try {
             return clazz.newInstance();
-        }
-        catch (Exception e) {
+        } catch (final Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static TransactionType forPrettyName(String s) {
-        for (TransactionType type : values()) {
+    public static TransactionType forPrettyName(final String s) {
+        for (final TransactionType type : values()) {
             if (type.prettyName.equals(s))
                 return type;
         }
         throw new RuntimeException("No transaction type for description '" + s + "'");
     }
 
-    public static TransactionType forString(String s) {
+    public static TransactionType forString(final String s) {
         if (s == null)
             return null;
         try {
             return valueOf(s);
-        }
-        catch (IllegalArgumentException e) {
+        } catch (final IllegalArgumentException e) {
             return null;
         }
     }

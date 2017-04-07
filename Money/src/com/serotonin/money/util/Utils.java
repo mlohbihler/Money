@@ -21,61 +21,59 @@ public class Utils {
         XA_DATE_FORMAT.setLenient(false);
     }
 
-    public static String getExchange(String symbol) {
-        int colon = symbol.indexOf(":");
+    public static String getExchange(final String symbol) {
+        final int colon = symbol.indexOf(":");
         if (colon == -1)
             return null;
         return symbol.substring(0, colon);
     }
 
-    public static String getSymbolSansExchange(String symbol) {
-        int colon = symbol.indexOf(":");
+    public static String getSymbolSansExchange(final String symbol) {
+        final int colon = symbol.indexOf(":");
         if (colon == -1)
             return symbol;
         return symbol.substring(colon + 1);
     }
 
-    public static String urlEncode(String url) {
+    public static String urlEncode(final String url) {
         try {
             return URLEncoder.encode(url, "UTF-8");
-        }
-        catch (UnsupportedEncodingException e) {
+        } catch (final UnsupportedEncodingException e) {
             throw new ShouldNeverHappenException(e);
         }
     }
 
-    public static String urlDecode(String s) {
+    public static String urlDecode(final String s) {
         try {
             return URLDecoder.decode(s, "UTF-8");
-        }
-        catch (UnsupportedEncodingException e) {
+        } catch (final UnsupportedEncodingException e) {
             throw new ShouldNeverHappenException(e);
         }
     }
 
-    public static String cleanParameter(String s) {
+    public static String cleanParameter(final String s) {
         if (s == null)
             return null;
-        s = s.replaceAll("<", "&lt;");
-        s = s.replaceAll(">", "&gt;");
-        s = s.replaceAll("script", "");
-        s = s.replaceAll("iframe", "");
-        return s;
+        String ss = s.replaceAll("<", "&lt;");
+        ss = ss.replaceAll(">", "&gt;");
+        ss = ss.replaceAll("script", "");
+        ss = ss.replaceAll("iframe", "");
+        return ss;
     }
 
     public static List<Account> accountsWithTransactions() throws TransactionException {
-        List<Account> accounts = BaseDao.accountDao.get();
+        final List<Account> accounts = BaseDao.accountDao.get();
         accountsWithTransactions(accounts);
         return accounts;
     }
 
-    public static void accountsWithTransactions(List<Account> accounts) throws TransactionException {
-        for (Account account : accounts)
+    public static void accountsWithTransactions(final List<Account> accounts) throws TransactionException {
+        for (final Account account : accounts)
             addTransactions(account);
     }
 
-    public static void addTransactions(Account account) throws TransactionException {
-        for (Transaction tx : BaseDao.transactionDao.get(account.getId())) {
+    public static void addTransactions(final Account account) throws TransactionException {
+        for (final Transaction tx : BaseDao.transactionDao.get(account.getId())) {
             tx.apply(account);
             tx.setLastCashBalance(account.getCashBalance());
         }

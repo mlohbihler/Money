@@ -18,17 +18,17 @@ public class AssetDao extends BaseDao {
     private static final String SELECT = "SELECT symbol, name, marketPrice, marketTime, marketSymbol, divAmount, "
             + "divDay, divMonth, divPerYear, divXaType, divCountry, divSymbolId, notes FROM Assets";
 
-    public void populate(List<Asset> assets) {
+    public void populate(final List<Asset> assets) {
         // Copy the assets to a lookup map
-        final Map<String, Asset> map = new HashMap<String, Asset>();
-        for (Asset asset : assets)
+        final Map<String, Asset> map = new HashMap<>();
+        for (final Asset asset : assets)
             map.put(asset.getSymbol(), asset);
 
         ejt.query(SELECT, new RowCallbackHandler() {
             @Override
-            public void processRow(ResultSet rs) throws SQLException {
-                AssetInfo ai = rm.mapRow(rs, 0);
-                Asset asset = map.get(ai.getSymbol());
+            public void processRow(final ResultSet rs) throws SQLException {
+                final AssetInfo ai = rm.mapRow(rs, 0);
+                final Asset asset = map.get(ai.getSymbol());
                 if (asset != null)
                     asset.setAssetInfo(ai);
             }
@@ -39,7 +39,7 @@ public class AssetDao extends BaseDao {
         return ejt.query(SELECT + " ORDER BY symbol", rm);
     }
 
-    public AssetInfo get(String symbol) {
+    public AssetInfo get(final String symbol) {
         return ejt.queryForObject(SELECT + " WHERE symbol=?", new Object[] { symbol }, rm, null);
     }
 
@@ -51,9 +51,9 @@ public class AssetDao extends BaseDao {
 
     static class AssetInfoRM implements RowMapper<AssetInfo> {
         @Override
-        public AssetInfo mapRow(ResultSet rs, int index) throws SQLException {
+        public AssetInfo mapRow(final ResultSet rs, final int index) throws SQLException {
             int i = 0;
-            AssetInfo a = new AssetInfo();
+            final AssetInfo a = new AssetInfo();
             a.setSymbol(rs.getString(++i));
             a.setName(rs.getString(++i));
             a.setMarketPrice(rs.getDouble(++i));
@@ -66,8 +66,7 @@ public class AssetDao extends BaseDao {
 
             try {
                 a.setDivXaType(TransactionType.valueOf(rs.getString(++i)));
-            }
-            catch (IllegalArgumentException e) {
+            } catch (final IllegalArgumentException e) {
                 a.setDivXaType(null);
             }
 
@@ -78,26 +77,24 @@ public class AssetDao extends BaseDao {
         }
     }
 
-    public void save(AssetInfo assetInfo) {
-        String divXaType = assetInfo.getDivXaType() == null ? "" : assetInfo.getDivXaType().name();
+    public void save(final AssetInfo assetInfo) {
+        final String divXaType = assetInfo.getDivXaType() == null ? "" : assetInfo.getDivXaType().name();
 
-        ejt.update(
-                "INSERT INTO Assets " //
-                        + "  (symbol, name, marketPrice, marketTime, marketSymbol, divAmount, divDay, divMonth, divPerYear, divXaType, " //
-                        + "   divCountry, divSymbolId, notes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)" //
-                        + "ON DUPLICATE KEY UPDATE " //
-                        + "  name=?, marketPrice=?, marketTime=?, marketSymbol=?, divAmount=?, divDay=?, divMonth=?, " //
-                        + "  divPerYear=?, divXaType=?, divCountry=?, divSymbolId=?, notes=?", assetInfo.getSymbol(),
-                assetInfo.getName(), assetInfo.getMarketPrice(), assetInfo.getMarketTime(),
-                assetInfo.getMarketSymbol(), assetInfo.getDivAmount(), assetInfo.getDivDay(), assetInfo.getDivMonth(),
-                assetInfo.getDivPerYear(), divXaType, assetInfo.getDivCountry().name(), assetInfo.getDivSymbolId(),
-                assetInfo.getNotes(), assetInfo.getName(), assetInfo.getMarketPrice(), assetInfo.getMarketTime(),
-                assetInfo.getMarketSymbol(), assetInfo.getDivAmount(), assetInfo.getDivDay(), assetInfo.getDivMonth(),
-                assetInfo.getDivPerYear(), divXaType, assetInfo.getDivCountry().name(), assetInfo.getDivSymbolId(),
-                assetInfo.getNotes());
+        ejt.update("INSERT INTO Assets " //
+                + "  (symbol, name, marketPrice, marketTime, marketSymbol, divAmount, divDay, divMonth, divPerYear, divXaType, " //
+                + "   divCountry, divSymbolId, notes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)" //
+                + "ON DUPLICATE KEY UPDATE " //
+                + "  name=?, marketPrice=?, marketTime=?, marketSymbol=?, divAmount=?, divDay=?, divMonth=?, " //
+                + "  divPerYear=?, divXaType=?, divCountry=?, divSymbolId=?, notes=?", assetInfo.getSymbol(),
+                assetInfo.getName(), assetInfo.getMarketPrice(), assetInfo.getMarketTime(), assetInfo.getMarketSymbol(),
+                assetInfo.getDivAmount(), assetInfo.getDivDay(), assetInfo.getDivMonth(), assetInfo.getDivPerYear(),
+                divXaType, assetInfo.getDivCountry().name(), assetInfo.getDivSymbolId(), assetInfo.getNotes(),
+                assetInfo.getName(), assetInfo.getMarketPrice(), assetInfo.getMarketTime(), assetInfo.getMarketSymbol(),
+                assetInfo.getDivAmount(), assetInfo.getDivDay(), assetInfo.getDivMonth(), assetInfo.getDivPerYear(),
+                divXaType, assetInfo.getDivCountry().name(), assetInfo.getDivSymbolId(), assetInfo.getNotes());
     }
 
-    public void delete(String symbol) {
+    public void delete(final String symbol) {
         ejt.update("DELETE FROM Assets WHERE symbol=?", symbol);
     }
 }

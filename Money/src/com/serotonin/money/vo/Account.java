@@ -16,15 +16,15 @@ public class Account {
     private String colour;
 
     private BigDecimal cashBalance = new BigDecimal(0);
-    private final List<Asset> assets = new ArrayList<Asset>();
-    private final List<AssetInvestment> investments = new ArrayList<AssetInvestment>();
+    private final List<Asset> assets = new ArrayList<>();
+    private final List<AssetInvestment> investments = new ArrayList<>();
     private BigDecimal interest = new BigDecimal(0);
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(final int id) {
         this.id = id;
     }
 
@@ -32,7 +32,7 @@ public class Account {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -40,7 +40,7 @@ public class Account {
         return notes;
     }
 
-    public void setNotes(String notes) {
+    public void setNotes(final String notes) {
         this.notes = notes;
     }
 
@@ -48,12 +48,20 @@ public class Account {
         return colour;
     }
 
-    public void setColour(String colour) {
+    public void setColour(final String colour) {
         this.colour = colour;
     }
 
-    public Asset getAsset(String symbol, boolean add) {
-        for (Asset asset : assets) {
+    /**
+     * Find the asset with the given symbol
+     *
+     * @param symbol
+     * @param add
+     *            Whether to add the symbol if it is not found. Only use true if the symbol is not a GIC.
+     * @return
+     */
+    public Asset getAsset(final String symbol, final boolean add) {
+        for (final Asset asset : assets) {
             if (asset.getSymbol().equals(symbol))
                 return asset;
         }
@@ -61,7 +69,7 @@ public class Account {
         if (!add)
             return null;
 
-        Asset asset = new Asset(symbol);
+        final Asset asset = new Asset(symbol, null);
 
         int index = Collections.binarySearch(assets, asset);
         if (index < 0)
@@ -78,16 +86,16 @@ public class Account {
         return cashBalance;
     }
 
-    public void setCashBalance(BigDecimal cashBalance) {
+    public void setCashBalance(final BigDecimal cashBalance) {
         this.cashBalance = cashBalance.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void addCashBalance(BigDecimal amount) {
+    public void addCashBalance(final BigDecimal amount) {
         cashBalance = cashBalance.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
         //System.out.println("Added " + amount + ", new balance: " + cashBalance);
     }
 
-    public void subtractCashBalance(BigDecimal amount) {
+    public void subtractCashBalance(final BigDecimal amount) {
         cashBalance = cashBalance.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
         //System.out.println("Subtracted " + amount + ", new balance: " + cashBalance);
     }
@@ -102,7 +110,7 @@ public class Account {
         return investments;
     }
 
-    public void addInvestment(BigDecimal amount, Date date) {
+    public void addInvestment(final BigDecimal amount, final Date date) {
         investments.add(new AssetInvestment(amount, date));
     }
 
@@ -112,15 +120,15 @@ public class Account {
         return interest;
     }
 
-    public void setInterest(BigDecimal interest) {
+    public void setInterest(final BigDecimal interest) {
         this.interest = interest.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void addInterest(BigDecimal amount) {
+    public void addInterest(final BigDecimal amount) {
         interest = interest.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public void subtractInterest(BigDecimal amount) {
+    public void subtractInterest(final BigDecimal amount) {
         interest = interest.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
@@ -128,15 +136,15 @@ public class Account {
         return getRateOfReturn(new Date());
     }
 
-    public double getRateOfReturn(Date asOfDate) {
+    public double getRateOfReturn(final Date asOfDate) {
         BigDecimal totalReturn = new BigDecimal(0);
-        for (Asset asset : assets)
+        for (final Asset asset : assets)
             totalReturn = totalReturn.add(asset.getReturn());
         //totalReturn = totalReturn.add(cashBalance);
         totalReturn = totalReturn.add(interest);
 
-        List<Investment> list = new ArrayList<Investment>();
-        for (AssetInvestment i : investments)
+        final List<Investment> list = new ArrayList<>();
+        for (final AssetInvestment i : investments)
             list.add(new Investment(i.getAmount(), RateOfReturn.differenceInYears(i.getDate(), asOfDate)));
         return RateOfReturn.calculate(totalReturn, list);
     }

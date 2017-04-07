@@ -22,19 +22,19 @@ abstract public class AbstractController extends HttpServlet {
             Map<String, Object> model) throws IOException, ServletException;
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException,
-            IOException {
+    protected void service(final HttpServletRequest request, final HttpServletResponse response)
+            throws ServletException, IOException {
         ControllerResult result = null;
 
-        Map<String, Object> model = new HashMap<String, Object>();
+        final Map<String, Object> model = new HashMap<>();
         result = handle(request, response, model);
-        for (Map.Entry<String, Object> entry : model.entrySet())
+        for (final Map.Entry<String, Object> entry : model.entrySet())
             request.setAttribute(entry.getKey(), entry.getValue());
 
         if (result == null) {
             // If no result was provided, default to JSP.
             String path = request.getRequestURI();
-            String ctxPath = request.getContextPath();
+            final String ctxPath = request.getContextPath();
             if (ctxPath != null)
                 path = path.substring(ctxPath.length());
             result = new JspResult(path);
@@ -43,73 +43,74 @@ abstract public class AbstractController extends HttpServlet {
         result.execute(request, response);
     }
 
-    protected boolean isPost(HttpServletRequest request) {
+    protected boolean isPost(final HttpServletRequest request) {
         return request.getMethod().equals("POST");
     }
 
-    protected boolean isGet(HttpServletRequest request) {
+    protected boolean isGet(final HttpServletRequest request) {
         return request.getMethod().equals("GET");
     }
 
-    protected String getAndPutParameter(HttpServletRequest request, String key, Map<String, Object> model) {
-        String s = Utils.cleanParameter(request.getParameter(key));
+    protected String getAndPutParameter(final HttpServletRequest request, final String key,
+            final Map<String, Object> model) {
+        final String s = Utils.cleanParameter(request.getParameter(key));
         if (!StringUtils.isEmpty(s))
             model.put(key, s);
         return s;
     }
 
-    protected boolean getAndPutBooleanParameter(HttpServletRequest request, String key, Map<String, Object> model) {
+    protected boolean getAndPutBooleanParameter(final HttpServletRequest request, final String key,
+            final Map<String, Object> model) {
         String s = request.getParameter(key);
         s = Utils.cleanParameter(s);
-        boolean b = Boolean.parseBoolean(s);
+        final boolean b = Boolean.parseBoolean(s);
         model.put(key, b);
         return b;
     }
 
-    protected int getAndPutIntParameter(HttpServletRequest request, String key, int defaultValue,
-            Map<String, Object> model) {
-        int i = getIntParameter(request, key, defaultValue);
+    protected int getAndPutIntParameter(final HttpServletRequest request, final String key, final int defaultValue,
+            final Map<String, Object> model) {
+        final int i = getIntParameter(request, key, defaultValue);
         model.put(key, i);
         return i;
     }
 
-    protected int getIntParameter(HttpServletRequest request, String key, int defaultValue) {
-        String str = Utils.cleanParameter(request.getParameter(key));
+    protected int getIntParameter(final HttpServletRequest request, final String key, final int defaultValue) {
+        final String str = Utils.cleanParameter(request.getParameter(key));
         try {
             if (str != null)
                 return Integer.parseInt(str);
-        }
-        catch (NumberFormatException e) {
+        } catch (final NumberFormatException e) {
             // no op
         }
         return defaultValue;
     }
 
-    protected double getAndPutDoubleParameter(HttpServletRequest request, String key, double defaultValue,
-            Map<String, Object> model) {
-        double d = getDoubleParameter(request, key, defaultValue);
+    protected double getAndPutDoubleParameter(final HttpServletRequest request, final String key,
+            final double defaultValue, final Map<String, Object> model) {
+        final double d = getDoubleParameter(request, key, defaultValue);
         model.put(key, d);
         return d;
     }
 
-    protected double getDoubleParameter(HttpServletRequest request, String key, double defaultValue) {
-        String str = Utils.cleanParameter(request.getParameter(key));
+    protected double getDoubleParameter(final HttpServletRequest request, final String key, final double defaultValue) {
+        final String str = Utils.cleanParameter(request.getParameter(key));
         try {
             if (str != null)
                 return Double.parseDouble(str);
-        }
-        catch (NumberFormatException e) {
+        } catch (final NumberFormatException e) {
             // no op
         }
         return defaultValue;
     }
 
-    protected void addParameterToModel(HttpServletRequest request, String key, Map<String, Object> model) {
+    protected void addParameterToModel(final HttpServletRequest request, final String key,
+            final Map<String, Object> model) {
         addParameterToModel(request, key, model, null);
     }
 
-    protected void addParameterToModel(HttpServletRequest request, String key, Map<String, Object> model,
-            Object defaultValue) {
+    protected void addParameterToModel(final HttpServletRequest request, final String key,
+            final Map<String, Object> model, final Object defaultValue) {
         if (request.getParameter(key) != null)
             model.put(key, request.getParameter(key));
         else if (defaultValue != null)

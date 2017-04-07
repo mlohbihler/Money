@@ -34,7 +34,7 @@ CREATE TABLE Transactions (
   xaDate DATE NOT NULL,
   xaType VARCHAR(20) NOT NULL,
   symbol VARCHAR(30),
-  symbol2 VARCHAR(30),
+  symbol2 VARCHAR(100),
   shares DECIMAL(12,4),
   price DECIMAL(12,6),
   exchange DECIMAL(12,4),

@@ -28,8 +28,8 @@ public class DividendServlet extends AbstractController {
     private static final long serialVersionUID = 1L;
 
     @Override
-    public ControllerResult handle(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model)
-            throws IOException, ServletException {
+    public ControllerResult handle(final HttpServletRequest request, final HttpServletResponse response,
+            final Map<String, Object> model) throws IOException, ServletException {
         if (isPost(request)) {
             if (request.getParameter("generate") != null) {
                 // Cutoff date, 3 months from now.
@@ -45,8 +45,7 @@ public class DividendServlet extends AbstractController {
                     for (final Transaction tx : BaseDao.transactionDao.get(account.getId())) {
                         try {
                             tx.apply(account);
-                        }
-                        catch (final TransactionException e) {
+                        } catch (final TransactionException e) {
                             // Ignore
                             throw new ServletException(e);
                         }
@@ -110,8 +109,7 @@ public class DividendServlet extends AbstractController {
                         }
                     }
                 }
-            }
-            else if (request.getParameter("delete") != null) {
+            } else if (request.getParameter("delete") != null) {
                 final int id = getIntParameter(request, "id", 0);
                 BaseDao.dividendDao.delete(id);
             }
@@ -119,12 +117,11 @@ public class DividendServlet extends AbstractController {
 
         try {
             model.put("accounts", Utils.accountsWithTransactions());
-        }
-        catch (final TransactionException e) {
+        } catch (final TransactionException e) {
             throw new ServletException(e);
         }
 
-        final List<StringStringPair> xaTypes = new ArrayList<StringStringPair>();
+        final List<StringStringPair> xaTypes = new ArrayList<>();
         for (final TransactionType type : TransactionType.values()) {
             if (type.dividend)
                 xaTypes.add(new StringStringPair(type.name(), type.prettyName));
@@ -139,7 +136,7 @@ public class DividendServlet extends AbstractController {
         int month;
         int year;
 
-        void add(int months) {
+        void add(final int months) {
             month += months;
             if (month > 12) {
                 year++;

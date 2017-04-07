@@ -16,6 +16,7 @@ import com.serotonin.money.dao.BaseDao;
 import com.serotonin.money.util.Utils;
 import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.tx.Buy;
+import com.serotonin.money.vo.tx.BuyGIC;
 import com.serotonin.money.vo.tx.CashAdjustment;
 import com.serotonin.money.vo.tx.CashDividend;
 import com.serotonin.money.vo.tx.Contribution;
@@ -69,14 +70,20 @@ public class TransactionServlet extends AbstractController {
                         model.put("BUYPrice", tx.getPrice());
                         model.put("BUYFx", tx.getForeignExchange());
                         model.put("BUYFee", tx.getFee());
-                    } else if (tx.getTransactionType() == TransactionType.CASHADJ)
+                    } else if (tx.getTransactionType() == TransactionType.BUYGIC) {
+                        model.put("BUYGICSymbol", tx.getSymbol());
+                        model.put("BUYGICDescription", tx.getSymbol2());
+                        model.put("BUYGICAmount", tx.getPrice());
+                        model.put("BUYGICRate", tx.getForeignExchange());
+                        model.put("BUYGICTerm", tx.getFee());
+                    } else if (tx.getTransactionType() == TransactionType.CASHADJ) {
                         model.put("CASHADJAmount", tx.getPrice());
-                    else if (tx.getTransactionType() == TransactionType.CASHDIV) {
+                    } else if (tx.getTransactionType() == TransactionType.CASHDIV) {
                         model.put("CASHDIVSymbol", tx.getSymbol());
                         model.put("CASHDIVAmount", tx.getPrice());
-                    } else if (tx.getTransactionType() == TransactionType.CONTRIBUTION)
+                    } else if (tx.getTransactionType() == TransactionType.CONTRIBUTION) {
                         model.put("CONTRIBUTIONAmount", tx.getPrice());
-                    else if (tx.getTransactionType() == TransactionType.DEPOSIT) {
+                    } else if (tx.getTransactionType() == TransactionType.DEPOSIT) {
                         model.put("DEPOSITBene", tx.getSymbol2());
                         model.put("DEPOSITAmount", tx.getPrice());
                     } else if (tx.getTransactionType() == TransactionType.EXCHADJ) {
@@ -89,9 +96,9 @@ public class TransactionServlet extends AbstractController {
                     } else if (tx.getTransactionType() == TransactionType.GRANT) {
                         model.put("GRANTBene", tx.getSymbol());
                         model.put("GRANTAmount", tx.getPrice());
-                    } else if (tx.getTransactionType() == TransactionType.INTEREST)
+                    } else if (tx.getTransactionType() == TransactionType.INTEREST) {
                         model.put("INTERESTAmount", tx.getPrice());
-                    else if (tx.getTransactionType() == TransactionType.MANAGEMENT_FEE) {
+                    } else if (tx.getTransactionType() == TransactionType.MANAGEMENT_FEE) {
                         model.put("MANAGEMENT_FEESymbol", tx.getSymbol());
                         model.put("MANAGEMENT_FEEShares", tx.getShares());
                         model.put("MANAGEMENT_FEEPrice", tx.getPrice());
@@ -129,8 +136,9 @@ public class TransactionServlet extends AbstractController {
                         model.put("TRANSFER_INShares", tx.getShares());
                         model.put("TRANSFER_INPrice", tx.getPrice());
                         model.put("TRANSFER_INBook", tx.getBookValue());
-                    } else if (tx.getTransactionType() == TransactionType.WITHDRAWAL)
+                    } else if (tx.getTransactionType() == TransactionType.WITHDRAWAL) {
                         model.put("WITHDRAWALAmount", tx.getPrice());
+                    }
                 }
             } else {
                 // The url to which to return upon successful save of the transaction
@@ -178,6 +186,11 @@ public class TransactionServlet extends AbstractController {
             final double buyPrice = getAndPutDoubleParameter(request, "BUYPrice", 0, model);
             final double buyFx = getAndPutDoubleParameter(request, "BUYFx", 0, model);
             final double buyFee = getAndPutDoubleParameter(request, "BUYFee", 0, model);
+            final String buygicSymbol = getAndPutParameter(request, "BUYGICSymbol", model);
+            final String buygicDescription = getAndPutParameter(request, "BUYGICDescription", model);
+            final double buygicAmount = getAndPutDoubleParameter(request, "BUYGICAmount", 0, model);
+            final double buygicRate = getAndPutDoubleParameter(request, "BUYGICRate", 0, model);
+            final double buygicTerm = getAndPutDoubleParameter(request, "BUYGICTerm", 5, model);
             final double cashadjAmount = getAndPutDoubleParameter(request, "CASHADJAmount", 0, model);
             final String cashdivSymbol = getAndPutParameter(request, "CASHDIVSymbol", model);
             final double cashdivAmount = getAndPutDoubleParameter(request, "CASHDIVAmount", 0, model);
@@ -227,6 +240,9 @@ public class TransactionServlet extends AbstractController {
                 Transaction xa = null;
                 if (type == TransactionType.BUY)
                     xa = new Buy(id, accountId, date, buySymbol, buyShares, buyPrice, buyFx, buyFee);
+                else if (type == TransactionType.BUYGIC)
+                    xa = new BuyGIC(id, accountId, date, buygicSymbol, buygicDescription, buygicAmount, buygicRate,
+                            buygicTerm);
                 else if (type == TransactionType.CASHADJ)
                     xa = new CashAdjustment(id, accountId, date, cashadjAmount);
                 else if (type == TransactionType.CASHDIV)
