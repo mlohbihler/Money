@@ -22,6 +22,7 @@ import com.serotonin.money.vo.tx.CashDividend;
 import com.serotonin.money.vo.tx.Contribution;
 import com.serotonin.money.vo.tx.Deposit;
 import com.serotonin.money.vo.tx.ExchangeAdjustment;
+import com.serotonin.money.vo.tx.Fee;
 import com.serotonin.money.vo.tx.FeeRebate;
 import com.serotonin.money.vo.tx.Grant;
 import com.serotonin.money.vo.tx.Interest;
@@ -90,6 +91,8 @@ public class TransactionServlet extends AbstractController {
                         model.put("EXCHADJSymbol", tx.getSymbol());
                         model.put("EXCHADJShares", tx.getShares());
                         model.put("EXCHADJPrice", tx.getPrice());
+                    } else if (tx.getTransactionType() == TransactionType.FEE) {
+                        model.put("FEEAmount", tx.getFee());
                     } else if (tx.getTransactionType() == TransactionType.FEE_REBATE) {
                         model.put("FEE_REBATESymbol", tx.getSymbol());
                         model.put("FEE_REBATEAmount", tx.getFee());
@@ -200,6 +203,7 @@ public class TransactionServlet extends AbstractController {
             final String exchadjSymbol = getAndPutParameter(request, "EXCHADJSymbol", model);
             final int exchadjShares = getAndPutIntParameter(request, "EXCHADJShares", 0, model);
             final double exchadjPrice = getAndPutDoubleParameter(request, "EXCHADJPrice", 0, model);
+            final double feeAmount = getAndPutDoubleParameter(request, "FEEAmount", 0, model);
             final String feerebateSymbol = getAndPutParameter(request, "FEE_REBATESymbol", model);
             final double feerebateAmount = getAndPutDoubleParameter(request, "FEE_REBATEAmount", 0, model);
             final String grantBene = getAndPutParameter(request, "GRANTBene", model);
@@ -253,6 +257,8 @@ public class TransactionServlet extends AbstractController {
                     xa = new Deposit(id, accountId, date, depositBene, depositAmount);
                 else if (type == TransactionType.EXCHADJ)
                     xa = new ExchangeAdjustment(id, accountId, date, exchadjSymbol, exchadjShares, exchadjPrice);
+                else if (type == TransactionType.FEE)
+                    xa = new Fee(id, accountId, date, feeAmount);
                 else if (type == TransactionType.FEE_REBATE)
                     xa = new FeeRebate(id, accountId, date, feerebateSymbol, feerebateAmount);
                 else if (type == TransactionType.GRANT)

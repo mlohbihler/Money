@@ -67,7 +67,7 @@ public class DividendServlet extends AbstractController {
                             if (latest == null)
                                 latest = BaseDao.transactionDao.getLatestDividendDate(account.getId(),
                                         asset.getSymbol());
-                            if (latest == null || latest.before(nowish))
+                            if (latest == null)
                                 latest = nowish;
 
                             final MonthYear monthYear = new MonthYear();

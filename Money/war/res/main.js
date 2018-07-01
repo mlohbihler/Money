@@ -56,17 +56,14 @@ money.txDesc = function(symbol, t) {
 			s += t.symbol2;
 	} else if (t.transactionType == "EXCHADJ") {
 		s += t.shares +" @ "+ t.price;
+  } else if (t.transactionType == "FEE") {
+    ;
 	} else if (t.transactionType == "FEE_REBATE") {
 		;
 	} else if (t.transactionType == "GRANT") {
 		s += t.symbol2;
 	} else if (t.transactionType == "INTEREST") {
-		s += "Shares: "+ t.shares +"<br/>";
-		s += "Price: "+ t.price +"<br/>";
-		s += "FX: "+ t.foreignExchange +"<br/>";
-		s += "Fee: "+ t.fee +"<br/>";
-		s += "Book: "+ t.bookValue +"<br/>";
-		return s;
+		;
 	} else if (t.transactionType == "MERGER") {
 		if (symbol == null)
 			s += t.shares +" becomes "+ t.price +" in "+ t.symbol2;

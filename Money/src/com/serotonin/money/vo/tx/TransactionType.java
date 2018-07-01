@@ -8,6 +8,7 @@ public enum TransactionType {
     CONTRIBUTION("Contribution", Contribution.class, false), //
     DEPOSIT("Deposit", Deposit.class, false), //
     EXCHADJ("Exchange adjustment", ExchangeAdjustment.class, false), //
+    FEE("Fee", Fee.class, false), //
     FEE_REBATE("Fee rebate", FeeRebate.class, false), //
     GRANT("Grant", Grant.class, false), //
     INTEREST("Interest", Interest.class, false), //

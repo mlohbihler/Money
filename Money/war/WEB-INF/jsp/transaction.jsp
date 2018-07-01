@@ -138,6 +138,13 @@
         </tr>
       </tbody>
       
+      <tbody id="div-FEE" class="xaDiv hide">
+        <tr>
+          <th>Amount</th>
+          <td><input type="text" name="FEEAmount" value="${FEEAmount}" class="short number ui-corner-all"/></td>
+        </tr>
+      </tbody>
+      
       <tbody id="div-FEE_REBATE" class="xaDiv hide">
         <tr>
           <th>Symbol</th>
