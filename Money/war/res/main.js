@@ -43,8 +43,8 @@ money.txDesc = function(symbol, t) {
 	if (t.transactionType == "BUY") {
 		s += t.shares +" @ "+ t.price;
 	} else if (t.transactionType == "BUYGIC") {
-        s += "Rate: "+ t.price +"%<br/>";
-        s += "Term: "+ t.foreignExchange +" years<br/>";
+        s += "Rate: "+ t.foreignExchange +"%<br/>";
+        s += "Term: "+ t.fee +" years<br/>";
     } else if (t.transactionType == "CASHADJ") {
 		;
     } else if (t.transactionType == "CASHDIV") {
