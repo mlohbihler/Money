@@ -9,15 +9,17 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class CashDividend extends Transaction {
-    CashDividend() {
+    public CashDividend() {
         // no op
     }
 
-    public CashDividend(int id, int accountId, Date date, String symbol, double amount) throws TransactionException {
+    public CashDividend(final int id, final int accountId, final Date date, final String symbol, final double amount)
+            throws TransactionException {
         this(id, accountId, date, symbol, new BigDecimal(amount));
     }
 
-    public CashDividend(int id, int accountId, Date date, String symbol, BigDecimal amount) throws TransactionException {
+    public CashDividend(final int id, final int accountId, final Date date, final String symbol,
+            final BigDecimal amount) throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(amount))
@@ -32,8 +34,8 @@ public class CashDividend extends Transaction {
     }
 
     @Override
-    public void apply(Account account) throws TransactionException {
-        Asset asset = account.getAsset(getSymbol(), false);
+    public void apply(final Account account) throws TransactionException {
+        final Asset asset = account.getAsset(getSymbol(), false);
         if (asset == null)
             throw new TransactionException("Cash dividend in asset that does not exist: '" + getSymbol() + "'");
 

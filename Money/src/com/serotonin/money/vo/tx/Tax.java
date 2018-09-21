@@ -9,15 +9,17 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class Tax extends Transaction {
-    Tax() {
+    public Tax() {
         // no op
     }
 
-    public Tax(int id, int accountId, Date date, String symbol, double tax) throws TransactionException {
+    public Tax(final int id, final int accountId, final Date date, final String symbol, final double tax)
+            throws TransactionException {
         this(id, accountId, date, symbol, new BigDecimal(tax));
     }
 
-    public Tax(int id, int accountId, Date date, String symbol, BigDecimal tax) throws TransactionException {
+    public Tax(final int id, final int accountId, final Date date, final String symbol, final BigDecimal tax)
+            throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(tax))
@@ -32,8 +34,8 @@ public class Tax extends Transaction {
     }
 
     @Override
-    public void apply(Account account) throws TransactionException {
-        Asset asset = account.getAsset(getSymbol(), false);
+    public void apply(final Account account) throws TransactionException {
+        final Asset asset = account.getAsset(getSymbol(), false);
         if (asset == null)
             throw new TransactionException("Tax in asset that does not exist: '" + getSymbol() + "'");
 

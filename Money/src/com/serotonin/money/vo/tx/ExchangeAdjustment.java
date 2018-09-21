@@ -9,17 +9,17 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class ExchangeAdjustment extends Transaction {
-    ExchangeAdjustment() {
+    public ExchangeAdjustment() {
         // no op
     }
 
-    public ExchangeAdjustment(int id, int accountId, Date date, String symbol, int shares, double price)
-            throws TransactionException {
+    public ExchangeAdjustment(final int id, final int accountId, final Date date, final String symbol, final int shares,
+            final double price) throws TransactionException {
         this(id, accountId, date, symbol, new BigDecimal(shares), new BigDecimal(price));
     }
 
-    public ExchangeAdjustment(int id, int accountId, Date date, String symbol, BigDecimal shares, BigDecimal price)
-            throws TransactionException {
+    public ExchangeAdjustment(final int id, final int accountId, final Date date, final String symbol,
+            final BigDecimal shares, final BigDecimal price) throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(shares))
@@ -36,8 +36,8 @@ public class ExchangeAdjustment extends Transaction {
     }
 
     @Override
-    public void apply(Account account) {
-        Asset asset = account.getAsset(getSymbol(), true);
+    public void apply(final Account account) {
+        final Asset asset = account.getAsset(getSymbol(), true);
         asset.setLastTransactionDate(getTransactionDate());
         asset.addQuantity(getShares());
 

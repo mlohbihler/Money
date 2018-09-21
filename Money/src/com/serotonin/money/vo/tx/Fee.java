@@ -6,7 +6,7 @@ import java.util.Date;
 import com.serotonin.money.vo.Account;
 
 public class Fee extends Transaction {
-    Fee() {
+    public Fee() {
         // no op
     }
 

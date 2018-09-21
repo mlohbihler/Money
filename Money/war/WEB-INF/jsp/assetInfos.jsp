@@ -15,6 +15,7 @@
   <table class="table">
     <tr>
       <th>Symbol</th>
+      <th>Currency</th>
       <th>Dividend amount</th>
       <th>Dividend schedule</th>
       <th>Market price</th>
@@ -26,6 +27,7 @@
           <a href="assetInfos/${asset.symbol}">${asset.symbol}</a><br/>
           <span class="assetName">${asset.name}</span>
         </td>
+        <td>${asset.divCountry}</td>
         <td>$${asset.divAmount}</td>
         <td>
           <c:choose>

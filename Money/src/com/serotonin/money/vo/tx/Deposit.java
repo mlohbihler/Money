@@ -8,15 +8,17 @@ import org.apache.commons.lang3.StringUtils;
 import com.serotonin.money.vo.Account;
 
 public class Deposit extends Transaction {
-    Deposit() {
+    public Deposit() {
         // no op
     }
 
-    public Deposit(int id, int accountId, Date date, String beneficiary, double amount) throws TransactionException {
+    public Deposit(final int id, final int accountId, final Date date, final String beneficiary, final double amount)
+            throws TransactionException {
         this(id, accountId, date, beneficiary, new BigDecimal(amount));
     }
 
-    public Deposit(int id, int accountId, Date date, String beneficiary, BigDecimal amount) throws TransactionException {
+    public Deposit(final int id, final int accountId, final Date date, final String beneficiary,
+            final BigDecimal amount) throws TransactionException {
         if (StringUtils.isEmpty(beneficiary))
             throw new TransactionException("Bad beneficiary");
         if (!isGTZero(amount))
@@ -31,7 +33,7 @@ public class Deposit extends Transaction {
     }
 
     @Override
-    public void apply(Account account) {
+    public void apply(final Account account) {
         account.addCashBalance(getPrice());
         account.addInvestment(getPrice(), getTransactionDate());
     }

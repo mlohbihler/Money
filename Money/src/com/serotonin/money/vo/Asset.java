@@ -1,6 +1,7 @@
 package com.serotonin.money.vo;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -84,15 +85,15 @@ public class Asset implements Comparable<Asset> {
     }
 
     public void setBookValue(final BigDecimal bookValue) {
-        this.bookValue = bookValue.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.bookValue = bookValue.setScale(2, RoundingMode.HALF_UP);
     }
 
     public void addBookValue(final BigDecimal amount) {
-        bookValue = bookValue.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        bookValue = bookValue.add(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     public void subtractBookValue(final BigDecimal amount) {
-        bookValue = bookValue.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        bookValue = bookValue.subtract(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     //
@@ -102,15 +103,15 @@ public class Asset implements Comparable<Asset> {
     }
 
     public void setCashReturn(final BigDecimal cashReturn) {
-        this.cashReturn = cashReturn.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.cashReturn = cashReturn.setScale(2, RoundingMode.HALF_UP);
     }
 
     public void addCashReturn(final BigDecimal amount) {
-        cashReturn = cashReturn.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        cashReturn = cashReturn.add(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     public void subtractCashReturn(final BigDecimal amount) {
-        cashReturn = cashReturn.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        cashReturn = cashReturn.subtract(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     //

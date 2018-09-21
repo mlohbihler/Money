@@ -9,18 +9,19 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class Sell extends Transaction {
-    Sell() {
+    public Sell() {
         // no op
     }
 
-    public Sell(int id, int accountId, Date transactionDate, String symbol, double shares, double price, double fx,
-            double fee) throws TransactionException {
+    public Sell(final int id, final int accountId, final Date transactionDate, final String symbol, final double shares,
+            final double price, final double fx, final double fee) throws TransactionException {
         this(id, accountId, transactionDate, symbol, new BigDecimal(shares), new BigDecimal(price), new BigDecimal(fx),
                 new BigDecimal(fee));
     }
 
-    public Sell(int id, int accountId, Date transactionDate, String symbol, BigDecimal shares, BigDecimal price,
-            BigDecimal fx, BigDecimal fee) throws TransactionException {
+    public Sell(final int id, final int accountId, final Date transactionDate, final String symbol,
+            final BigDecimal shares, final BigDecimal price, final BigDecimal fx, final BigDecimal fee)
+            throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(shares))
@@ -37,20 +38,20 @@ public class Sell extends Transaction {
     }
 
     @Override
-    public void apply(Account account) throws TransactionException {
-        Asset asset = account.getAsset(getSymbol(), false);
+    public void apply(final Account account) throws TransactionException {
+        final Asset asset = account.getAsset(getSymbol(), false);
         if (asset == null)
             throw new TransactionException("Sell in asset that does not exist: '" + getSymbol() + "'");
         if (asset.getQuantity().doubleValue() <= 0)
             throw new TransactionException("Sell in asset with zero quantity: '" + getSymbol() + "'");
 
-        BigDecimal ratio = new BigDecimal(1 - getShares().doubleValue() / asset.getQuantity().doubleValue());
+        final BigDecimal ratio = new BigDecimal(1 - getShares().doubleValue() / asset.getQuantity().doubleValue());
 
         asset.setLastTransactionDate(getTransactionDate());
         asset.subtractQuantity(getShares());
         asset.setBookValue(asset.getBookValue().multiply(ratio));
 
-        BigDecimal value = getCashAmount();
+        final BigDecimal value = getCashAmount();
 
         account.addCashBalance(value);
         asset.addCashReturn(value);

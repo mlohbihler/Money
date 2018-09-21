@@ -36,7 +36,7 @@ public enum TransactionType {
 
     public Transaction createTransaction() {
         try {
-            return clazz.newInstance();
+            return clazz.getConstructor().newInstance();
         } catch (final Exception e) {
             throw new RuntimeException(e);
         }

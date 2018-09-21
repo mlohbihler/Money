@@ -12,7 +12,7 @@ import com.serotonin.money.vo.Asset;
 public class BuyGIC extends Transaction {
     private BigDecimal market;
 
-    BuyGIC() {
+    public BuyGIC() {
         // no op
     }
 

@@ -9,29 +9,31 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class TransferIn extends Transaction {
-    TransferIn() {
+    public TransferIn() {
         // no op
     }
 
-    public TransferIn(int id, int accountId, Date transactionDate, double amount) throws TransactionException {
+    public TransferIn(final int id, final int accountId, final Date transactionDate, final double amount)
+            throws TransactionException {
         this(id, accountId, transactionDate, new BigDecimal(amount));
     }
 
-    public TransferIn(int id, int accountId, Date transactionDate, BigDecimal amount) throws TransactionException {
+    public TransferIn(final int id, final int accountId, final Date transactionDate, final BigDecimal amount)
+            throws TransactionException {
         if (!isGTZero(amount))
             throw new TransactionException("Bad amount");
 
         data(id, accountId, transactionDate, null, null, null, amount, null, null, null);
     }
 
-    public TransferIn(int id, int accountId, Date transactionDate, String symbol, double shares, double price,
-            double bookValue) throws TransactionException {
-        this(id, accountId, transactionDate, symbol, new BigDecimal(shares), new BigDecimal(price), new BigDecimal(
-                bookValue));
+    public TransferIn(final int id, final int accountId, final Date transactionDate, final String symbol,
+            final double shares, final double price, final double bookValue) throws TransactionException {
+        this(id, accountId, transactionDate, symbol, new BigDecimal(shares), new BigDecimal(price),
+                new BigDecimal(bookValue));
     }
 
-    public TransferIn(int id, int accountId, Date transactionDate, String symbol, BigDecimal shares, BigDecimal price,
-            BigDecimal bookValue) throws TransactionException {
+    public TransferIn(final int id, final int accountId, final Date transactionDate, final String symbol,
+            final BigDecimal shares, final BigDecimal price, final BigDecimal bookValue) throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(shares))
@@ -50,19 +52,18 @@ public class TransferIn extends Transaction {
     }
 
     @Override
-    public void apply(Account account) {
+    public void apply(final Account account) {
         if (StringUtils.isBlank(getSymbol())) {
             // Cash
             account.addCashBalance(getBookValue());
             account.addInvestment(getBookValue(), getTransactionDate());
-        }
-        else {
+        } else {
             // In kind
-            Asset asset = account.getAsset(getSymbol(), true);
+            final Asset asset = account.getAsset(getSymbol(), true);
             asset.setLastTransactionDate(getTransactionDate());
             asset.addQuantity(getShares());
             asset.addBookValue(getBookValue());
-            BigDecimal market = getShares().multiply(getPrice());
+            final BigDecimal market = getShares().multiply(getPrice());
             asset.subtractCashReturn(market);
             asset.addInvestment(market, getTransactionDate());
 

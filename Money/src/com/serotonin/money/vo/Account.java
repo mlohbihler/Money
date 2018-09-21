@@ -1,6 +1,7 @@
 package com.serotonin.money.vo;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -87,16 +88,16 @@ public class Account {
     }
 
     public void setCashBalance(final BigDecimal cashBalance) {
-        this.cashBalance = cashBalance.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.cashBalance = cashBalance.setScale(2, RoundingMode.HALF_UP);
     }
 
     public void addCashBalance(final BigDecimal amount) {
-        cashBalance = cashBalance.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        cashBalance = cashBalance.add(amount).setScale(2, RoundingMode.HALF_UP);
         //System.out.println("Added " + amount + ", new balance: " + cashBalance);
     }
 
     public void subtractCashBalance(final BigDecimal amount) {
-        cashBalance = cashBalance.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        cashBalance = cashBalance.subtract(amount).setScale(2, RoundingMode.HALF_UP);
         //System.out.println("Subtracted " + amount + ", new balance: " + cashBalance);
     }
 
@@ -121,15 +122,15 @@ public class Account {
     }
 
     public void setInterest(final BigDecimal interest) {
-        this.interest = interest.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.interest = interest.setScale(2, RoundingMode.HALF_UP);
     }
 
     public void addInterest(final BigDecimal amount) {
-        interest = interest.add(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        interest = interest.add(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     public void subtractInterest(final BigDecimal amount) {
-        interest = interest.subtract(amount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        interest = interest.subtract(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     public double getRateOfReturn() {

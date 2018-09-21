@@ -1,6 +1,7 @@
 package com.serotonin.money.vo.tx;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Date;
 
 import org.apache.commons.lang3.StringUtils;
@@ -11,7 +12,7 @@ import com.serotonin.money.vo.AssetInvestment;
 
 /**
  * Transfers shares from one asset to another.
- * 
+ *
  * transactionDate: date
  * settlementDate: not used
  * symbol: pair of symbols delimited with '/' (from/to)
@@ -19,17 +20,17 @@ import com.serotonin.money.vo.AssetInvestment;
  * price: to shares
  */
 public class Merger extends Transaction {
-    Merger() {
+    public Merger() {
         // no op
     }
 
-    public Merger(int id, int accountId, Date date, String fromSymbol, String toSymbol, double fromShares,
-            double toShares) throws TransactionException {
+    public Merger(final int id, final int accountId, final Date date, final String fromSymbol, final String toSymbol,
+            final double fromShares, final double toShares) throws TransactionException {
         this(id, accountId, date, fromSymbol, toSymbol, new BigDecimal(fromShares), new BigDecimal(toShares));
     }
 
-    public Merger(int id, int accountId, Date date, String fromSymbol, String toSymbol, BigDecimal fromShares,
-            BigDecimal toShares) throws TransactionException {
+    public Merger(final int id, final int accountId, final Date date, final String fromSymbol, final String toSymbol,
+            final BigDecimal fromShares, final BigDecimal toShares) throws TransactionException {
         if (StringUtils.isEmpty(fromSymbol))
             throw new TransactionException("Bad 'from' symbol");
         if (StringUtils.isEmpty(toSymbol))
@@ -48,12 +49,12 @@ public class Merger extends Transaction {
     }
 
     @Override
-    public void apply(Account account) throws TransactionException {
-        String from = getSymbol();
-        String to = getSymbol2();
+    public void apply(final Account account) throws TransactionException {
+        final String from = getSymbol();
+        final String to = getSymbol2();
 
         // Take the shares from the from account and determine the book value.
-        Asset fromAsset = account.getAsset(from, false);
+        final Asset fromAsset = account.getAsset(from, false);
         if (fromAsset == null)
             throw new TransactionException("Merger from asset that does not exist: '" + from + "'");
 
@@ -63,8 +64,8 @@ public class Merger extends Transaction {
         if (fromAsset.getQuantity().doubleValue() < fromShares.doubleValue())
             throw new TransactionException("Merger in asset with insufficient shares: '" + from + "'");
 
-        BigDecimal ratio = new BigDecimal(fromShares.doubleValue() / fromAsset.getQuantity().doubleValue());
-        BigDecimal bookValue = fromAsset.getBookValue().multiply(ratio).setScale(2, BigDecimal.ROUND_HALF_UP);
+        final BigDecimal ratio = new BigDecimal(fromShares.doubleValue() / fromAsset.getQuantity().doubleValue());
+        final BigDecimal bookValue = fromAsset.getBookValue().multiply(ratio).setScale(2, RoundingMode.HALF_UP);
 
         fromAsset.setLastTransactionDate(getTransactionDate());
         fromAsset.subtractQuantity(fromShares);
@@ -74,18 +75,18 @@ public class Merger extends Transaction {
         BigDecimal toShares = getPrice();
         if (toShares == null)
             toShares = fromShares;
-        Asset toAsset = account.getAsset(to, true);
+        final Asset toAsset = account.getAsset(to, true);
         toAsset.setLastTransactionDate(getTransactionDate());
         toAsset.addQuantity(toShares);
         toAsset.addBookValue(bookValue);
 
         // Investment calculations
-        BigDecimal cashReturn = fromAsset.getCashReturn().multiply(ratio).setScale(2, BigDecimal.ROUND_HALF_UP);
+        final BigDecimal cashReturn = fromAsset.getCashReturn().multiply(ratio).setScale(2, RoundingMode.HALF_UP);
         toAsset.addCashReturn(cashReturn);
         fromAsset.subtractCashReturn(cashReturn);
 
-        for (AssetInvestment investment : fromAsset.getInvestments()) {
-            BigDecimal proRata = investment.getAmount().multiply(ratio).setScale(2, BigDecimal.ROUND_HALF_UP);
+        for (final AssetInvestment investment : fromAsset.getInvestments()) {
+            final BigDecimal proRata = investment.getAmount().multiply(ratio).setScale(2, RoundingMode.HALF_UP);
             toAsset.addInvestment(proRata, investment.getDate());
             investment.setAmount(investment.getAmount().subtract(proRata));
         }

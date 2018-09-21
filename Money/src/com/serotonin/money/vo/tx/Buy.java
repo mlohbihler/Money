@@ -9,18 +9,19 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class Buy extends Transaction {
-    Buy() {
+    public Buy() {
         // no op
     }
 
-    public Buy(int id, int accountId, Date transactionDate, String symbol, double shares, double price, double fx,
-            double fee) throws TransactionException {
+    public Buy(final int id, final int accountId, final Date transactionDate, final String symbol, final double shares,
+            final double price, final double fx, final double fee) throws TransactionException {
         this(id, accountId, transactionDate, symbol, new BigDecimal(shares), new BigDecimal(price), new BigDecimal(fx),
                 new BigDecimal(fee));
     }
 
-    public Buy(int id, int accountId, Date transactionDate, String symbol, BigDecimal shares, BigDecimal price,
-            BigDecimal fx, BigDecimal fee) throws TransactionException {
+    public Buy(final int id, final int accountId, final Date transactionDate, final String symbol,
+            final BigDecimal shares, final BigDecimal price, final BigDecimal fx, final BigDecimal fee)
+            throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (!isGTZero(shares))
@@ -37,12 +38,12 @@ public class Buy extends Transaction {
     }
 
     @Override
-    public void apply(Account account) {
-        Asset asset = account.getAsset(getSymbol(), true);
+    public void apply(final Account account) {
+        final Asset asset = account.getAsset(getSymbol(), true);
         asset.setLastTransactionDate(getTransactionDate());
         asset.addQuantity(getShares());
 
-        BigDecimal cost = getCashAmount();
+        final BigDecimal cost = getCashAmount();
 
         asset.addBookValue(cost);
         asset.subtractCashReturn(cost);

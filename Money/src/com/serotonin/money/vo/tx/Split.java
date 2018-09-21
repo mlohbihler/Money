@@ -9,15 +9,17 @@ import com.serotonin.money.vo.Account;
 import com.serotonin.money.vo.Asset;
 
 public class Split extends Transaction {
-    Split() {
+    public Split() {
         // no op
     }
 
-    public Split(int id, int accountId, Date date, String symbol, double shares) throws TransactionException {
+    public Split(final int id, final int accountId, final Date date, final String symbol, final double shares)
+            throws TransactionException {
         this(id, accountId, date, symbol, new BigDecimal(shares));
     }
 
-    public Split(int id, int accountId, Date date, String symbol, BigDecimal shares) throws TransactionException {
+    public Split(final int id, final int accountId, final Date date, final String symbol, final BigDecimal shares)
+            throws TransactionException {
         if (StringUtils.isEmpty(symbol))
             throw new TransactionException("Bad symbol");
         if (isEmpty(shares))
@@ -32,8 +34,8 @@ public class Split extends Transaction {
     }
 
     @Override
-    public void apply(Account account) throws TransactionException {
-        Asset asset = account.getAsset(getSymbol(), false);
+    public void apply(final Account account) throws TransactionException {
+        final Asset asset = account.getAsset(getSymbol(), false);
         if (asset == null)
             throw new TransactionException("Split in asset that does not exist: '" + getSymbol() + "'");
         asset.setLastTransactionDate(getTransactionDate());

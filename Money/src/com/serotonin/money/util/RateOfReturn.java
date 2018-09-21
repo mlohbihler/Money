@@ -1,6 +1,7 @@
 package com.serotonin.money.util;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -16,14 +17,14 @@ public class RateOfReturn {
     }
 
     public static double calculate(final BigDecimal totalInterest, final List<Investment> investments) {
-        final BigDecimal ti = totalInterest.setScale(2, BigDecimal.ROUND_HALF_UP);
+        final BigDecimal ti = totalInterest.setScale(2, RoundingMode.HALF_UP);
 
         double min = Double.NaN;
         double max = Double.NaN;
 
         double test = 1;
         while (true) {
-            final BigDecimal testInterest = getInterest(test, investments).setScale(2, BigDecimal.ROUND_HALF_UP);
+            final BigDecimal testInterest = getInterest(test, investments).setScale(2, RoundingMode.HALF_UP);
 
             final int comp = ti.compareTo(testInterest);
 

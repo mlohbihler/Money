@@ -2,6 +2,7 @@ package com.serotonin.money.web.controller;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -76,7 +77,7 @@ public class DividendServlet extends AbstractController {
 
                             BigDecimal amountBD = asset.getQuantity();
                             amountBD = amountBD.multiply(new BigDecimal(asset.getAssetInfo().getDivAmount()));
-                            final double amount = amountBD.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+                            final double amount = amountBD.setScale(2, RoundingMode.HALF_UP).doubleValue();
 
                             if (amount > 0) {
                                 while (true) {
