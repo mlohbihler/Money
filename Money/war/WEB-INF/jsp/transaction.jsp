@@ -156,6 +156,17 @@
         </tr>
       </tbody>
       
+      <tbody id="div-GIC_REDEEMED" class="xaDiv hide">
+        <tr>
+          <th>Symbol</th>
+          <td><input type="text" id="GIC_REDEEMEDSymbol" name="GIC_REDEEMEDSymbol" value="${GIC_REDEEMEDSymbol}" class="ui-corner-all"/></td>
+        </tr>
+        <tr>
+          <th>Amount</th>
+          <td><input type="text" name="GIC_REDEEMEDAmount" value="${GIC_REDEEMEDAmount}" class="short number ui-corner-all"/></td>
+        </tr>
+      </tbody>
+      
       <tbody id="div-GRANT" class="xaDiv hide">
         <tr>
           <th>Beneficiary</th>

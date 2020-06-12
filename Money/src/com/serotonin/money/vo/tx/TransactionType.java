@@ -10,6 +10,7 @@ public enum TransactionType {
     EXCHADJ("Exchange adjustment", ExchangeAdjustment.class, false), //
     FEE("Fee", Fee.class, false), //
     FEE_REBATE("Fee rebate", FeeRebate.class, false), //
+    GIC_REDEEMED("GIC redeemed", GICRedeemed.class, false), //
     GRANT("Grant", Grant.class, false), //
     INTEREST("Interest", Interest.class, false), //
     MANAGEMENT_FEE("Management fee", ManagementFee.class, false), //

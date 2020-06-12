@@ -24,6 +24,7 @@ import com.serotonin.money.vo.tx.Deposit;
 import com.serotonin.money.vo.tx.ExchangeAdjustment;
 import com.serotonin.money.vo.tx.Fee;
 import com.serotonin.money.vo.tx.FeeRebate;
+import com.serotonin.money.vo.tx.GICRedeemed;
 import com.serotonin.money.vo.tx.Grant;
 import com.serotonin.money.vo.tx.Interest;
 import com.serotonin.money.vo.tx.ManagementFee;
@@ -96,6 +97,9 @@ public class TransactionServlet extends AbstractController {
                     } else if (tx.getTransactionType() == TransactionType.FEE_REBATE) {
                         model.put("FEE_REBATESymbol", tx.getSymbol());
                         model.put("FEE_REBATEAmount", tx.getFee());
+                    } else if (tx.getTransactionType() == TransactionType.GIC_REDEEMED) {
+                        model.put("GIC_REDEEMEDSymbol", tx.getSymbol());
+                        model.put("GIC_REDEEMEDAmount", tx.getPrice());
                     } else if (tx.getTransactionType() == TransactionType.GRANT) {
                         model.put("GRANTBene", tx.getSymbol());
                         model.put("GRANTAmount", tx.getPrice());
@@ -206,6 +210,8 @@ public class TransactionServlet extends AbstractController {
             final double feeAmount = getAndPutDoubleParameter(request, "FEEAmount", 0, model);
             final String feerebateSymbol = getAndPutParameter(request, "FEE_REBATESymbol", model);
             final double feerebateAmount = getAndPutDoubleParameter(request, "FEE_REBATEAmount", 0, model);
+            final String gicRedeemedSymbol = getAndPutParameter(request, "GIC_REDEEMEDSymbol", model);
+            final double gicRedeemedAmount = getAndPutDoubleParameter(request, "GIC_REDEEMEDAmount", 0, model);
             final String grantBene = getAndPutParameter(request, "GRANTBene", model);
             final double grantAmount = getAndPutDoubleParameter(request, "GRANTAmount", 0, model);
             final double interestAmount = getAndPutDoubleParameter(request, "INTERESTAmount", 0, model);
@@ -261,6 +267,8 @@ public class TransactionServlet extends AbstractController {
                     xa = new Fee(id, accountId, date, feeAmount);
                 else if (type == TransactionType.FEE_REBATE)
                     xa = new FeeRebate(id, accountId, date, feerebateSymbol, feerebateAmount);
+                else if (type == TransactionType.GIC_REDEEMED)
+                    xa = new GICRedeemed(id, accountId, date, gicRedeemedSymbol, gicRedeemedAmount);
                 else if (type == TransactionType.GRANT)
                     xa = new Grant(id, accountId, date, grantBene, grantAmount);
                 else if (type == TransactionType.INTEREST)

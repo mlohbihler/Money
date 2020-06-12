@@ -10,16 +10,11 @@ public class CashAdjustment extends Transaction {
         // no op
     }
 
-    public CashAdjustment(final int id, final int accountId, final Date date, final double amount)
-            throws TransactionException {
+    public CashAdjustment(final int id, final int accountId, final Date date, final double amount) {
         this(id, accountId, date, new BigDecimal(amount));
     }
 
-    public CashAdjustment(final int id, final int accountId, final Date date, final BigDecimal amount)
-            throws TransactionException {
-        if (!isGTZero(amount))
-            throw new TransactionException("Bad amount");
-
+    public CashAdjustment(final int id, final int accountId, final Date date, final BigDecimal amount) {
         data(id, accountId, date, null, null, null, amount, null, null, null);
     }
 

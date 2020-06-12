@@ -62,7 +62,10 @@ public class BuyGIC extends Transaction {
     }
 
     public BigDecimal getMarketValue(final Date to) {
-        final double years = RateOfReturn.differenceInYears(getTransactionDate(), to);
+        double years = RateOfReturn.differenceInYears(getTransactionDate(), to);
+        if (years > getFee().doubleValue()) {
+            years = getFee().doubleValue();
+        }
         final BigDecimal rate = getForeignExchange().divide(new BigDecimal(100)).add(BigDecimal.ONE);
         final double accruedRate = Math.pow(rate.doubleValue(), years);
         market = getPrice().multiply(new BigDecimal(accruedRate));

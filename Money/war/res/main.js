@@ -43,11 +43,11 @@ money.txDesc = function(symbol, t) {
 	if (t.transactionType == "BUY") {
 		s += t.shares +" @ "+ t.price;
 	} else if (t.transactionType == "BUYGIC") {
-        s += "Rate: "+ t.foreignExchange +"%<br/>";
-        s += "Term: "+ t.fee +" years<br/>";
-    } else if (t.transactionType == "CASHADJ") {
-		;
-    } else if (t.transactionType == "CASHDIV") {
+    s += "Rate: "+ t.foreignExchange +"%<br/>";
+    s += "Term: "+ t.fee +" years<br/>";
+  } else if (t.transactionType == "CASHADJ") {
+    ;
+  } else if (t.transactionType == "CASHDIV") {
 		;
 	} else if (t.transactionType == "CONTRIBUTION") {
 		;
@@ -58,8 +58,10 @@ money.txDesc = function(symbol, t) {
 		s += t.shares +" @ "+ t.price;
   } else if (t.transactionType == "FEE") {
     ;
-	} else if (t.transactionType == "FEE_REBATE") {
-		;
+  } else if (t.transactionType == "FEE_REBATE") {
+    ;
+  } else if (t.transactionType == "GIC_REDEEMED") {
+    ;
 	} else if (t.transactionType == "GRANT") {
 		s += t.symbol2;
 	} else if (t.transactionType == "INTEREST") {
